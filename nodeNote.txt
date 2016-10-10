@@ -1,0 +1,374 @@
+NODE.JS  
+		第一课
+
+1，	NODE.JS 建议使有用common.js的规范
+
+2，	如果直接调用模块名称，会从当前路径开始，逐级向上查找node_modules 止录中的文件
+
+3，	相对路径跟绝对路径调用模块不需要文件扩展名
+
+4，	模块加载一次之后会被缓存
+
+5，	避免出现循环require  /*循环require 解释 A中引用B B中引用A*/
+
+6，	node.js中require中的当前路径为"./当前路径位置"
+
+7，	console.log(module.paths); 会出现查找路径的方式
+
+8，	console.log(module) 会出现当前模块对象里面所有的内容
+
+9,	循环引用会导制解耦不方便
+
+10，	node.js require模块会把模块里面的内容全都执行一次 
+
+11，	node.js require模块会返回模块内的export中的内容
+
+12,	node.js require 模块在引用时会缓存起来所以只会执行一次，可以用来做静态变量也可以做初始化
+
+
+		第二课
+
+1，	require('test') require中的第一种路径会直接在node_modules中去找模块一直向上查找node_modules
+
+2,	require('./test') require中的第二种路径从当前目录人查找
+
+3，	如果通过相对路径查找文件名会先找当前目录中的文件体如果没有的话会再查找文件名
+
+4，	可以在webstorm中配制是否配制核心模块 settings 》 languages 》 node.js and NPM 》 Enable
+
+5，	在相对路径中引入如果在文件名中可以通过建方一个名为package.json的文件来配制默认的引用JS {"name": "test.js"}
+
+6，	一般在node构造模块中一般只构造一个类直接复盖exports
+
+7,	在global中引用了global
+
+8，	每一个API都做一个小例子
+
+9，	事件处理	标准输入出	文件操作	Beffer？	NET HTTP 	进程中 > uncaughtException	emitter.once()
+ 
+10，	EventEmitter 事件处理 常用的emitter.emit() emitter.on() emitter.once()
+	例子
+	main.js
+		var MyClass = require('./class');
+		
+		var my = new MyClass();
+
+		my.on("change", function(oldValue, newValue){
+			console.log(oldValue, newValue)		
+		})
+		
+		my.setProp("test1")
+		
+	class.js
+		var util = require('util');
+		var EventEmitter = require('events');
+		function MyClass(){
+			this._prop = undeinfed;
+		}
+		
+		util.inherits(MyClass, EventEmitter);
+		
+		MyClass.prototype.setProp = function(prop){
+			if(this._prop != prop){
+				var oldValue = this_prop;
+				this._prop = prop;
+				this.emit("change", oldVlaue, newValue);
+			}
+		}
+			
+		module.exports = MyClass;
+		
+	
+		第三课
+
+1，	readline 处理流模块 》 Interfer 指定输入输出 | prompt 提示方法 | question 跟prompt类似prop用的是监听,question用的是回调 | setProp 设置提示语
+
+2，	readline 的使用
+	
+	var readline = reqiure('readline');
+	
+	var rl = readline.createInterface({
+		input: process.stdin,
+		output: process.stdout
+	});
+
+	rl.setPrompt("name");
+
+	rl.prompt(true);
+
+	rl.on('line', function(cmd){
+		console.log("您输入的内容是：" ＋　cmd)
+	});
+
+	rl.on('close', function(){
+		console.log('process exit')
+	})
+	
+	
+3，	fs 的使用
+	
+	// 同步读文件 函数直接返回内容
+	var fs = require('fs');
+	
+	var fileContent = fs.readFile('test.txt');
+
+	console.log(fileContent);
+
+	// 异步读文件 在回调用获取读取内容
+	fs.readFile('./test.txt', function(err, data){
+		if(err){
+			console.log(err)
+			return 
+		}
+		console.log(data);
+	});
+	
+	// 异步写文件
+	fs.writeFile('./test.txt', "write content", function(err, stats){
+		console.log(err?:err:stats);	
+	})
+
+	//  获取文件属性	
+4，	fs.stat('./test', function(err, stats){
+		console.log(err?err:stats.attr)
+	})
+
+
+
+
+		第四课
+
+1，	UDP相当于对着电话号码打过去，不管他有没有接就直接说话，传大块文件性能会更高
+
+2，	端口的最大值65535
+
+3，	cheerio是一个JQ子集的库
+
+4，	webstorm调试先Debug 行点击数标处设断点   step over 一行一行的执行  step into 已进入函数 force step into 不管怎么样都需要进入断点函数 step out 跳到上一层调用函数 run to  cursor 执行到光标处
+
+5，	可以在debug中的watch中查找自已需要的数据 可以在variables中看内存中的数据
+
+6，	net模块的使用
+	
+	服务端
+	
+		var net = require('net');
+		
+		var server = new net.Server();
+
+		server.on('connection', function(socket){
+			console.log('connection' + socket);
+			socket.on('data', function(d){
+				console.log('data is ' + d.toStirng())
+			});
+		});
+
+		server.on('error', function(e){
+			console.log(e);
+		});
+
+		server.on('close', function(err){
+			console.log(err);
+		});
+		
+		server.on('listening', functino(socket){
+			console.log('listen shijian!');
+		});
+
+		server.listen(5000, 'localhost', 100, function(socket){
+			console.log('listen success!');
+		});
+		
+		process.on('uncaughtException', function(e){
+			console.log('捕捉异常')
+		})
+					
+
+	// 客户端
+		var net = require('net');
+
+		var client = new net.Socket();
+
+		client.connect('50000', 'localhost', function(socket){
+			console.log('链接成功' + socket);
+
+			client.write('服务器。您好！', 'UTF8', function(){
+				console.log('给服务器发送消自成功！')
+			})
+		})
+	
+	// dgram模块的使用
+	// 服务端
+	
+		const dgram = require('dgram');
+			
+		const server = dgram.createSocket('udp4');
+
+		server.on('messge', function(msg, rinfo){
+			console.log('接到消息' + msg);
+			console.log(rinfo)
+		});
+		
+		server.on('listening', function(){
+			console.log('服务器开始监听')
+		})
+
+		server.bind(41234);
+	// 客户端
+		
+		const dgram = require('dgram');
+		
+		const client = dgram.createSocket('udp4');
+
+		var msg = new Buffer('您好，我是UDP客户端', 'utf8');
+		
+	// http模块的使用
+		var http = require('http');
+		
+		http.get('index.html', function(reg){
+
+			var data = ""
+			
+			reg.on('data', function(chunk){
+				data += chunk;
+				console.log(chunk.toString());
+			})
+			
+			reg.on('end', function(){
+				var $ = cheerio.load(data);
+				var title = $('title');
+				console.log(tite.first().text())
+			})
+		})
+			
+
+		第五课	
+	
+1，	分析即时聊天怎么做需要哪些对象，消息是一个对象，用户需要有ID，需要命令行，接收输入输入，需要客户端对象，需要服务器对象
+
+2,	建立对象  需要公共用户对象，需要公共消息对象
+
+3,	process.argv取得命令行里的参数，以空格分开，以数据的形式展示
+
+
+
+		第六课
+
+1，	node 最初的目地是建一个web服务器
+
+2，	node 是基于异步编程
+
+4，	框架 MVC 把代码分成不同的方面 M 是模型 V 是视图 C 处理逻辑 处理业务逻辑
+		Model	数据和逻辑    View 用户输入，展示输出    Controller 处理视图的输入，调用模型计算业务逻辑，选择合适的视图输入
+
+5，	Express 框架 bin 程序入口 node_modules 公共文件 public 路由 routes 路由 views 视图 app.js 应用程序配置  package.josn 包描述文件
+
+6，	页面的调用是通过routes文件实现的
+
+7，	中间件，主要用来执行中间模块 ~所有版本都可以
+
+		
+		第七课
+
+1，	express 的API中文官网 www.expressjs.com.cn
+
+2,	中间件是一个流水线操作
+
+3，	./只有require是可以指代当前路径
+
+4,	render会直接去引视图模块中找文件
+
+5，	路径有三种一种是相对路径一种是正则匹配一种是半正则配匹
+ 
+
+		第八课
+
+1，	hbs 可扩展性强
+
+2，	render中的第二个参数是视图参数
+
+3，	hbs 中的if使用 {{#if 表达式}}{{else}}{{/if}}
+
+4,	{{#each 对象或者数组}}代码块{{else}}代码块{{/each}}	
+	获取each的当前对象{{this}}
+	{{@index}} 当前的索引值
+	{{@key}} 表示当前的健值或都属性
+
+5，	{{#with 变量名}}代码块{{/with}}
+
+6,	{{#unless 条件}}代码块{{/unless}}
+
+7，	先加载index再把内容套入layout时面
+
+8，	hbs的官网http://handlebarsjs.com/
+
+
+		第九课
+
+1，	在mongo 数据库起动时如果报data\db错误可以在C盘建立data\db文件夹解决
+
+2,	mongodb.connect('mongodb://127.0.0.1:27017/test', null, function(err, db){
+  if(!err){
+    console.log('链接mongodb成功！')
+  }else{
+    console.log(err);
+  }
+});
+
+var server = new mongodb.Server('localhost', 27017, {auto_reconnect: true});
+
+server.on('connect', function(err){
+  if(!err){
+    console.log("链接成功");
+  }else{
+    console.log(err);
+  }
+});
+
+var db = new mongodb.Db('mydb', server, null);
+
+db.open(function(err){
+  if(err){
+    console.log(err);
+  }else{
+    db.createCollection("books", {safe: true}, function(err, collection){
+      if(err){
+        console.log(err)
+      }else{
+/*       var tmp1 = {id: "2", book_title: "he", price: 3};
+	// 添加数据
+       collection.insertOne(tmp1, {safe: true}, function(err, result){
+        console.log(result);
+         });*/
+	// 更新数据
+        /*      collection.update({title: '曾细亚'}, {$set: {number: 3}}, {safe: true}, function(err, result){
+         console.log(result);
+         })*/
+		
+		// 删数据
+/*         collection.remove({title: "hello"}, {safe: true}, function(err, result){
+            console.log(result.message)
+         })*/
+
+	// 查数据
+        collection.find({id: '2'}).toArray(function(err,docs){
+          console.log("find");
+          console.log(docs)
+        })
+      }
+    })
+  }
+});
+
+4，	http://cnodejs.org/topic/    mongoosejs.com
+
+
+		第十课
+
+1，	用户 角色 资源
+
+2，	mongodb 核心的有 model  schema connect 三个方法
+
+3，	引流方法翻译英文文档
+
+4	
