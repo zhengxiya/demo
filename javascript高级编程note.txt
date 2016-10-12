@@ -9,3 +9,8 @@ element.firstChild.insetData(offset, text);从offset指定的位置插入text
 element.firstChild.replaceData(offset, count, text);人offset处删除到count文本并替换成text
 element.firstChild.splitText(offset);从offset指定的位置将当前文本切割成几个元素 
 element.firstChild.substringData(offset, count);从offset提到count个文本字符串
+
+
+comment 注释节点
+	节点类型为 8 因其无法通过类名与ID名称查找 可以通过赢遍厉所有的元素来查找注释点节
+	属性有nodType nodeName nodeValue parentNode
