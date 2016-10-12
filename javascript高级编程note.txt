@@ -1,0 +1,11 @@
+element.normalize();这个方法能够把内部元素的节点合并成一个节点
+element.firstChlid;获取元素的文本节点
+element.firstChild.nodeType;节点类型
+element.firstChild.nodeName;节点名称
+element.firstChild.parent;是一个元素
+element.firstChild.appendData(text);将text添加到节点的末尾
+element.firstChild.deleteData(offset, count);从offset指定的位置删除count个节点
+element.firstChild.insetData(offset, text);从offset指定的位置插入text
+element.firstChild.replaceData(offset, count, text);人offset处删除到count文本并替换成text
+element.firstChild.splitText(offset);从offset指定的位置将当前文本切割成几个元素 
+element.firstChild.substringData(offset, count);从offset提到count个文本字符串
