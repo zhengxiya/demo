@@ -14,3 +14,57 @@ element.firstChild.substringData(offset, count);从offset提到count个文本字符串
 comment 注释节点
 	节点类型为 8 因其无法通过类名与ID名称查找 可以通过赢遍厉所有的元素来查找注释点节
 	属性有nodType nodeName nodeValue parentNode
+
+
+节点 
+	document
+	nodeType的值为10;
+	nodeName的值为doctype的名称;
+	nodeValue的值为null;
+	parentNode是document;
+
+节点documentFragment
+	nodeType的值为11；
+	nodeName的值为"#document-fragment";
+	nodeValue的值为null
+	parentNode的值为null;
+	子节点可以是element,processingInstruction, comment, text, CDATASection, EntityReference
+
+	var fragment = document.createDocumentFragment();
+	可以保存需要添加到文档中的节点;
+
+	例：
+		var fragment = document.createDocumentFragment();
+	var ul = document.createElement("ul");
+	var ulT = document.createTextNode("sfaasf");
+	var li = document.createElement("li");
+	var liT = document.createTextNode("asfsd");
+	ul.appendChild(ulT);
+	ul.appendChild(li);
+	li.appendChild(liT);
+	fragment.appendChild(ul);
+	document.body.appendChild(fragment);
+
+节点attr 
+	nodeType的值为11;
+	nodeName的值是特性的名称;
+	nodeValue的值是特性的值;
+	parentNode的值为null;
+	
+	Attr有三个属性name value specified
+	name 是nodeName value是nodeValue
+	var attr = document.createAttribute("align");
+	attr.value = "left";
+	element.setAttributeNode(attr);
+	element.attributes['align'].value;
+	element.getAttributeNode['align'].value;
+	element.getAttribute("align" )
+
+
+动态的创建脚本
+	function loadScript(url){
+		var script = document.createElement("script");
+		script.type = "text/javascript";
+		script.src = url;
+		document.body.appendChild(script);
+	}
