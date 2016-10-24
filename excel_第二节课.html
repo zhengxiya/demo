@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style>
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	html,body{
+		width: 100%;
+		height: 100%;
+		background: #000;
+		font-family: "Microsoft yahei";
+		overflow: hidden;
+	}
+	li{
+		list-style: none;
+	}
+	ul{
+		padding: 20px;
+		width: 960px;
+		margin: 60px auto 0;
+		border-radius: 10px;
+		overflow: hidden;
+		background-color: #fdd;
+		transition: all 1s ease-in;
+		overflow: hidden;
+	}
+	ul li:nth-child(old){
+		color: red;
+	}
+	ul li:nth-child(even){
+		color: blue;
+	}
+	ul li{
+		position: relative;
+		height: 36px;
+		text-align: center;
+		line-height: 36px;
+		cursor: pointer;
+		border-radius: 4px;
+	}
+	ul li[class$='nameJpg']:after{
+		color: #fd0;
+	}
+	ul li[class^='name']:after{
+		opacity: 0;
+		content: "阿飞课讲很棒";
+		position: absolute;
+		top: 0;
+		left: 0;		
+		width: 100%;
+		height: 36px;
+		text-indent: 50px;
+		font-weight: 700;
+		text-align: left;
+		line-height: 36px;
+		background-color: rgba(80,80,80,.8);
+		border-radius: 4px;
+	}
+	ul li[class$='Jpg']:after{
+		opacity: 0;
+		content: "阿飞很帅";
+		position: absolute;
+		top: 0;
+		left: 0;		
+		width: 100%;
+		height: 36px;
+		text-indent: 50px;
+		font-weight: 700;
+		text-align: left;
+		line-height: 36px;
+		background-color: rgba(80,80,80,.8);
+		border-radius: 4px;
+	}
+	ul li[class$='Jpg']:hover:after{
+		opacity: 1;
+	}
+	ul li[class^='name']:hover:after{
+		opacity: 1;
+	}
+	ul li[class^='name']:hover:not([class='namename']){
+		background: #fd0;
+	}
+	aside{
+		position: fixed;
+		top: 50px;
+		left: 50%;
+		width: 60px;
+		margin-left: -580px;
+		text-align: center;
+	}
+	aside a{
+		display: block;
+		margin: 10px auto;
+		font-weight: bold;
+		font-size: 14px;
+		background-color: #fdd;
+		line-height: 28px;
+		height: 28px;
+		color: rgba(0,0,0,.5);
+		border-radius: 10px;
+		text-decoration: none;
+	}
+	:target{
+		padding: 0;
+		width: 0;
+	}
+  </style>
+ </head>
+ <body>
+ <aside>
+	<a href="#name">收起</a>
+	<a href="#">展开</a>
+ </aside>
+ <ul id="name">
+ 	<li class="nameJpg">1</li>
+ 	<li class="nameJpg">2</li>
+ 	<li class="namename">3</li>
+ 	<li class="namejpg">4</li>
+ 	<li class="namepng">5</li>
+ 	<li class="namegit">6</li>
+ </ul>
+ </body>
+</html>

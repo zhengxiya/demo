@@ -62,9 +62,214 @@ comment 注释节点
 
 
 动态的创建脚本
-	function loadScript(url){
+	var scri = document.getElementsByTagName("script")[0];
+	loadScript("excel.js", scri);
+	function loadScript(url, ro){
 		var script = document.createElement("script");
 		script.type = "text/javascript";
 		script.src = url;
 		document.body.appendChild(script);
+		document.head.removeChild(ro);
 	}
+
+动态的创建执行脚本
+	var script = document.createElement("script");
+	script.type = "text/javascript";
+	var text = "var r = function(){alert('read')}";
+	try{
+		script.appendChild(document.createTextNode(text));
+	}catch(er){
+		script.text = text';
+	}
+
+动态的创建样式
+	function loadStyles(url){
+		var link = document.createElement("link");
+		link.rel = "stylesheet";
+		link.type = "text/css";
+		link.href = url;
+		var head = document.getElementsByTagName("head")[0];
+		head.appendChild(link);
+	}	
+
+动态的创建执行样式
+	function loadStyleString(css){
+		var style = document.createElement("style");
+		style.type = "text/cxx";
+		try{
+			style.appendChild(document.createTextNode(css));
+		}catch(err){
+			// 在使用styleSheet.cssText时需要注意这个代码重用会导制浏览器崩溃
+			style.styleSheet.cssText = css;
+		}
+		var head = document.getElementsByTagName("haed")[0];
+		head.appendChild(style);
+	}	
+
+表格
+
+	var table = document.createElement("table");
+	table.border = 1;
+	table.width = "100%";
+
+	// 创建tbody;
+	var tbody = document.createElement("tbody");
+	table.appendChild(tbody);
+
+	// 创建第一行
+	var row1 = document.createElement("tr");
+	tbody.appendChild(row1);
+	var cell1_1 = document.createElement("td");
+	cell1_1.appendChild(document.createTextNode("Cell 1.1"));
+	row1.appendChild(cell1_1);
+	var cell2_1 = document.createElement("td");
+	cell2_1.appendChild(document.createTextNode("Cell 2,1"));
+	row1.appendChild(cell2_1);
+
+	// 创建第二行
+	var row2 = document.createElement("tr");
+	tbody.appendChild(row2);
+	var tell1_2 = document.createElement("td");
+	tell1_2.appendChild(document.createTextNode("Cell 1,2"));
+	row2.appendChild(tell1_2);
+	var cell2_2 = document.createElement("td");
+	cell2_2.appendChild(document.createTextNode("Cell 2, 2"));
+	row2.appendChild(cell2_2);
+	
+	// 将表格添加到文档主体中
+	document.body.appendChild(table);
+
+	caption: 保存着对<caption>元素（如果有）的指针
+	tBodies: 是一个:<tbody>元素的HTMLCollection;
+	tFoot: 保存着对<tfoot>元素(如果有)的指针
+	tHead: 保存着对<thead>元素（如果有）的指针
+	rows: 是一个表格中所有行的HTMLCollection;
+	createTHead(): 创建<thead>元素，将其放到表格中，返回引用
+	createTFoot(): 创建<tfoot>元素，将期放到表格中，返回引用
+	createCaption(): 创建<caption>元素，将期放到表格中，返回引用
+	deleteThead(): 删除<thead>元素。
+	deleteTFoot: 删除<tfoot>元素。
+	deleteCaption(): 删除<caption>元素
+	deleteRow(pos): 删除指定位置的行.
+	insertRow(pos): 向rows集合中的指定位置插入一行
+	rows: 保存着<tbody> 元素中行的HTMLCollection。
+	deleteRow(pos): 删除指定位置的行。
+	insertRow(pops): 向rows 集合中的指定位置插入一行 返回引用、
+	cells: 保存着<tr>元素中单元格的HTMLCollection.
+	deleteCell(pos): 删除指定位的单元格	
+	insertCell(pos): 向cells集合中插入一个单元格 返回引用
+
+	
+	var table = document.createElement("table");
+	table.border = 1;
+	table.width = "100%";
+
+	// 创建tbody;
+	var tbody = document.createElement("tbody");
+	table.appendChild(tbody);
+
+	// 创建第一行
+	tbody.insertRow(0);
+	tbody.rows[0].insertCell(0);
+	tbody.rows[0].cells[0].appendChild(document.createTextNode("Cell 1"));
+	tbody.rows[0].insertCell(1);
+	tbody.rows[0].cells[1].appendChild(document.createTextNode("Cell 2"));
+
+	// 创建第二行
+	tbody.insertRow(1);
+	tbody.rows[1].insertCell(0);
+	tbody.rows[1].cells[0].appendChild(document.createTextNode("Cell 3"));
+	tbody.rows[1].insertCell(1);
+	tbody.rows[1].cells[1].appendChild(document.createTextNode("Cell 4"));
+
+	document.body.appendChild(table)
+
+
+	与客户沟通本着两个原则
+	1，考虑客户需求
+	2，考虑自身利益
+
+
+DOM扩展
+	document.querySelector("body");
+	查找API兼容经测试能兼容主流浏览器
+	document.querySelectorAll("p") 查找所有的p标签
+	// DOM确认API
+	function matchesSelector(element, selector){
+		if(element.matchesSelector){
+			return element.matchesSelector(selector);
+		}else if(element.msMatchesSelector){
+			return element.msMatchesSelector(selector)
+		}else if(element.mozMathesSelector){
+			return element.mozMathcesSelector(selector)
+		}else if(element.webkitMathesSelector){
+			return element.webkitMatchesSelector(selector);
+		}else{
+			throw new Error("Not supported.")
+		}
+	}
+	
+	element.childElementCount 返回子元素个数不包括文本跟注释节点
+	element.firstElementChild 指向第一个子元素
+	element.lastElementChild 指向最后一个子元素
+	previousElementSibling 指向前一个同辈元素
+	nextElementSibling 指向后一个同辈元素
+
+	
+	var i,
+		len,
+		child = element.firstChild;
+	while(child != element.lastChild){
+		if(child.nodeType == 1){
+			processChild(child);
+		}
+		child = child.nextSibling;
+	}
+	var i,
+		len,
+		child = element.firstElementChild;
+	while(child != element.lastElementChild){
+		processChild(child);
+		child = child.nextSibling;
+	}
+	
+
+类的操作
+	var div = document.getElementsByClassName("user name");	
+	var classNames = div.className.split(/\s+/);
+
+
+	// 找到要删的类名
+	var pos = -1,
+		i,
+		len;
+	for(i = 0,len = classNames.length;i < len; i++){
+		if(classNames[i] == deleteClassName){
+			pos = i;
+		}
+	}
+	
+	classNames.splice(i, 1);
+	
+	// 通过document.getElementsByClassName()这个方法获取到的元素会有一个classList的属性保存着所有的类名其类名有以下几种操作方法
+	add(value)：将给定的字符串值添车到列表中，如果值存在就不添加
+	contains(value): 表示列表中是否给定存在的值，如果存在返回true，否则返回false
+	remove(value): 从列表中删除给定的字符串
+	toggle(value): 如果列表中已存在的值就删除他否则就添加
+
+焦点管理
+	var buton = document.getElementsByTagName("button");
+	button.focus();
+	alert(document.activeElement === button); // true
+
+	// 可以判断元素是否处理焦点状态
+	document.hasFocus();
+
+
+
+
+
+
+
+
+
