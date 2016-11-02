@@ -265,8 +265,12 @@ DOM扩展
 	// 可以判断元素是否处理焦点状态
 	document.hasFocus();
 
-
-
+	
+	// document有readyState属性，这个属性的值有两种，第一种为loading,正在加载文档,complete，已经加载文档
+	if(document.readyState == "complete"){
+		// 执行操作
+	}
+	
 
 
 

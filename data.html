@@ -11,21 +11,9 @@
  <body>
  <div id="oj" class="name"		data-content="s56f4a6s5d1fas3d1fa3s2df" name >sfsaf</div>
   <script type="text/javascript">
-	function outputAttributes(element){
-		var pairs = new Array(),
-			attrName,
-			attrValue,
-			i,
-			len,
-		for(i = 0;len = element.attributes.length;i < leng; i++){
-			attriName = element.attributes[i].nodeName;
-			attriValue = element.attributes[i].nodeValue;
-			if(element.attributes[i].specified){
-				pairs.push(attrName + "=\"" + attrValue　＋ "\"");
-			}
-		}
-		return pairs.join(" ")
-	}
+		setInterval(function(){
+			document.body.innerHTML += document.readyState + "<br/>";
+		}, 10);
   </script>
  </body>
 </html>
