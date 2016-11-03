@@ -284,9 +284,85 @@ DOM扩展
 	// 如果在head里设置了charset的格式，那么这个属性只能获取charset格式
 	
 
+// 自定义数据属性
+	<div id="myDiv" data-appId = "12345" data-myname = "Nicholas"></div>
+		var div = document.getElementById("myDiv");
+	
+	// 取得自定义属性的值
+	var appId = div.dataset.appId;
+	var myName = div.dataset.myname;
+	
+	// 设置值
+	div.dataset.appId = 23456;
+	div.dataset.myname = "Michael";
 
+	// 有没有"myname"值呢
+	if(div.dataset.myname){
+		alert("hello ," + div.dataset.myname);
+	}
+	
+// innerHTML 
+	<div id="content">hello &amp; welcome, <b>&quot;reader&quot;!</b></div>
+	var div = document.getElementById("content");
+	// 因为innerHTML是为C++编写的，所以运行速度会更快，会更占内存，所有尽可能的少用innerHTML
+	// 用innerHTML添加script时需要有域支持因为用innerHTML创建出来的元素是没有域的所以有以下三种方法来处理这种域的处理
+	div.innerHTML = "_<script defer>alert('hi')<\/script>";
+	div.innerHTML = "<div>&nbsp;</div><script defer>alert('hi')<\/script>"
+	div.innerHTML = "<input type=\"hidden\"><script>alert('hi')<\/script>"
 
+	// 在IE8以前style也是一个没有域的元素所以也可以通过以上方法来添加域
+	还有一些元素不支持innerHTML例如<col>,<colgroup>,<framese>,<head>,<html>,<style>,
+	<table>,<tbody>,<thead>,<tfoot>,<tr>,<title>
 
+// toStaticHTML fn
+	// 只有IE8才支持这个方法
+	var text = "<a href=\"javascript:;\" onclick=\"alert('hi')\">Click ME</a>";
+	var sanitized = window.toStaticHTML(text);
+	alert(sanitized);
 
+// outerHTML
+	使用方法同innerHTML,不同的是outerHTML 会替换当前调用此方法的元素
 
+// insertAdjacentHTML();
 
+	"beforebegin":在当前元素之前插入一个紧邻的同辈元素
+	"afterbegin":在当前元素之下插入一个新的子元素或在第一个子元素之前再插入子元素
+	"beforeend":在当前元素之下插入一个新的子元素或在最后一个子元素之后再插入子元素
+	"afterend":在当前元素之后插入一个紧邻的同辈元素
+
+	// 作为前一个同辈元素插入
+	element.insertAdjecntHTML("beforebegin" "<p>hello world!</p>");
+
+	// 作为第一个子元素插入
+	element.insertAdjecntHTML("afterbegin", "<p>Hello world!</p>");
+
+	// 作为最后一个子元素插入
+	element.insertAdjacentHTML("beforeend", "<p>hello world!</p>");
+	
+	// 作为后一个同辈元素插入
+	element.insertAdjacentHTML("afterend", "<p>Hello world!</p>");
+
+// scrollIntoView()
+	// 把可视窗口调到第一个form的位置
+	document.forms[0].scrollIntoView();
+	
+// 文档模式
+	// content的值可以为以下几种
+	Edge: 始终以最新的文档模式来渲染页面，忽略文档类型声明，对于IE8，始终保持IE8的标准模式渲染页面，对于IE9，则以IE9的标准模式渲染页面
+	EmulateIE9: 如果有文档类型声明，则以IE9标准模式渲染页面
+	EmulateIE8: 如果有文档类型声明，则以IE8标准模式渲染页面
+	EmulateIE7: 如果有文档类型声明，则以IE7标准模式渲染页面
+	9: 强制以IE9标准模式渲染页面，忽略文档类型声明
+	8: 强制以IE8标准模式渲染页面，忽略文档类型声明
+	7: 强制以IE7标准模式渲染页面，忽略文档类型声明
+	// ie6无法通过此种类型设置
+	5: 强制将当模式设为IE5，忽略类型声明
+	<meta http-equiv="X-UA-Compatible" content="ie=IEVersion">
+	// 此属性可以获取浏览器的文档模式
+	var mode = document.documentMode;
+
+// children
+	// 这个属性出现的原因是因为浏览器在处理文本节点中的空白符时有差异，这个属笥是HTMLCollection的实例
+	／／　这个属性与ｃｈｉｌｄＮodes没什么区别　
+	element.children.length;
+	
