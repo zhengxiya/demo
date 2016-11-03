@@ -271,6 +271,19 @@ DOM扩展
 		// 执行操作
 	}
 	
+兼容模式
+	// document.compatMode 有两个值为CSS1Compat是标准模式，BackCompat是混杂模式
+	if(document.compatMode == "CSS1Compat"){
+		alert("Standards mode");
+	}else{
+		alert("Quirks mode")
+	}
+
+字符集属性
+	// document.charset 可以获取与设置网页字符集，
+	// 如果在head里设置了charset的格式，那么这个属性只能获取charset格式
+	
+
 
 
 
