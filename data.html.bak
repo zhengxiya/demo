@@ -1,60 +1,28 @@
 <!doctype html>		
 <html lang="en">
  <head>
+  <meta charset="UTF-8"/>
   <meta name="Generator" content="EditPlus®">
   <meta name="Author" content="">
   <meta name="Keywords" content="">
   <meta name="Description" content="">
   <title>Document</title>
+  <style type="text/css">
+	*{
+		position: relative;
+		line-height: 18px;
+	}
+  </style>
  </head>
  <body>
- <div id="oj" class="name" data-content="s56f4a6s5d1fas3d1fa3s2df" name >sf雷鸣jasaf</div>
- 
+ <div id="oj" class="name" data-contensrt="s56f4a6s5d1fas3d1fa3s2df" name >sf雷鸣jasaf</div>
+ "<a href=''>sjfaldfj;</a>"
+ <div id="obj"></div>
+ <img src="http://rms.zhubajie.com/resource/redirect?key=service%2F2016-09%2F27%2Fservice%2F57ea2fa4b1256.jpg&s.w=200&s.h=200&s.format=webp" style="margin-top: 2000px">
   <script type="text/javascript">
-		
-	var div = document.getElementById("oj");
-	// 取得自定义的属性值
-	appId = div.dataset.appId;
-	var myName = div.dataset.myname;
-
-	// 设置值
-	div.dataset.appId = 23456;
-	div.dataset.myname = "Michael";
-	
-	// 有没有"myname"值呢？
-	if(div.dataset.myname){
-		alert("hello, " + div.dataset.myname);
-	}
-
-	var div = document.getElementById("oj");
-
-	// 取得自定义的属笥值
-	appId = div.dataset.appId;
-	var myname = div.dataset.myname;
-
-	// 设置值
-	div.dataset.appid = 23456;
-	div.dataset.myname = "Michael";
-
-	// 有没有"myname"值呢？
-	if(div.dataset.myname){
-		alert("hello, " + div.dataset.myname);
-	}
-
-	// 
-	var div = document.getElementById("oj");
-	// 取得自定义的属性值
-	appId = div.dataset.appId;
-	var myname = div.dataset.myname;
-
-	// 设置值
-	div.dataset.appId = 23456;
-	div.dataset.myname = "Michael";
-
-	// 有没有"myname"值呢？
-	if(div.dataset.myname){
-		alert("hello, " +　)
-	}
+		document.onload = function(){
+			document.images[0].scrollIntoView()
+		}
   </script>
  </body>
 </html>

@@ -363,6 +363,51 @@ DOM扩展
 
 // children
 	// 这个属性出现的原因是因为浏览器在处理文本节点中的空白符时有差异，这个属笥是HTMLCollection的实例
-	／／　这个属性与ｃｈｉｌｄＮodes没什么区别　
+	// 这个属性与childNodes没什么区别　
 	element.children.length;
+	element.children[0]
+
+// document.body.contains(element) 判断无素是否在body内，如果在的话返回TRUE，否则返回false
+
+
+// document.body.compareDocumentPosition(element); 此方法可以确认节点element 与document.body的关系返回值 
+	1: 无关
+	2：居前
+	4：居后
+	8：包含，是上级元素
+	16：被包含的子元素
+	20: 被包含的子元素
+function contains(refNode, otherNode){
+	if(typeof refNode.contains == "function" && (!client.engine.webkit || client.engine.webkit >= 522)){
+		return refNode.contains(otherNode);
+	}else if(typeof refNode.compareDocumentPosition == "function"){
+		return !!(refNode.compareDocumentPositoin(otherNode & 16));
+	}else{
+		var node = otherNode.parentNode;
+		do{
+			if(node === refNode){
+				return true;
+			}else{
+				ndoe = node.parentNode;
+			}
+		}while(node !== null);
+		return false;
+	};
+}
+
+// document.body.innerText 定义文本节点内容
+
+	function setInnerText(element, text){
+		if((typeof element.textContent).toLowerCase == "string"){
+			element.textContent = text;
+		}else{
+			element.innerText = text;
+		}
+	};
+
+// scrollIntoView();
+	// 此方法的兼容性差
+	scrollIntoViewIfNeeded(); // 只在当前元素在视口中不可见的情况下才滚动浏览器窗口或，容器元素，最终让它可见，如果当前元素在视口可见，这个方法什么也不做如果传入参数true则会使元素居中
+	scrollByLines(lineCount) :将元素的内容滚动指定的行高 可以为 + -值 
+	scrollByPages(pageCount): 将元素内容滚动指定的页面高度，具体高度由元素的高度决定;
 	
