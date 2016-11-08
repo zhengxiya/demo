@@ -410,4 +410,28 @@ function contains(refNode, otherNode){
 	scrollIntoViewIfNeeded(); // 只在当前元素在视口中不可见的情况下才滚动浏览器窗口或，容器元素，最终让它可见，如果当前元素在视口可见，这个方法什么也不做如果传入参数true则会使元素居中
 	scrollByLines(lineCount) :将元素的内容滚动指定的行高 可以为 + -值 
 	scrollByPages(pageCount): 将元素内容滚动指定的页面高度，具体高度由元素的高度决定;
-	
+// document.implementation.hasFeature("Core", "3.0") 可以检测当前DOM的核心的级别也可以检测 HTML Views XML
+var supportsDOM2Core = document.implementation.hasFeature("Core", "2.0");
+var supportsDOM3Core = document.implementation.hasFeature("Core", "3.0");
+var supportsDOM2HTML = document.implementation.hasFeature("HTML", "2.0");
+var supportDOM2Views = document.implementation.hasFeature("Views", "2.0");
+var supportsDOM2XML = document.implementation.hasFeature("XML", "2.0");
+console.log("DOM2级 " + supportsDOM2Core);
+console.log("DOM3级 " + supportsDOM3Core);
+console.log("DOM2级 的html " + supportsDOM2Core);
+console.log("DOM2级 的视图" + supportDOM2Views);
+console.log("DOM2级 的XML" + supportsDOM2XML);
+console.log("DOM2级 的XML" + supportsDOM2XML);
+
+// html命名空间
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>www.name</title>
+	</head>
+	 	<!-- SVG 属于别一个命名字间将svg标识为与包含文档无关的元素 -->
+	<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBos="0 0 100 100" style="widht: 100%;hegiht: 100%">
+		
+		<rect x="0" y="0" width="100" height="100" style="fill:red"></rect>
+		
+	</svg>
+</html>
