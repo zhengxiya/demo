@@ -1,0 +1,57 @@
+//深入详解 1.
+
+	ajax 的几种代替方式
+	远古时代的ajax
+	要求做一个在线投票，给自已喜的歌手
+	
+	利用HTTP的特性来实现对PHP的请求来达到填充数据的效果
+	方法1
+		利用header("HTTP/1.1 204 No Content")的不刷新页面的特性
+	方法2
+		利用IMG发送资源请求来实现PHP的请求以达到执行PHP文件的效果
+	方法3
+		利用src对资源请求的特性来实现执行PHP文件的效果。
+
+	所谓的AJAX，即是指：页面不刷 新的情况下，利用XML HttpRequest发送HTTP请求
+	JS的网络化
+
+	思考题 
+	Ajax 上传文件能实现吗
+	
+	分析从HTTP协议的角度来看，上传文件，则要把文件的内容发送到服务器，如果可以XML HttpRequest 对 旬e在POST数据时把文件的内容也发送过去
+	-->XHR对象获取了你要上传的文件的内容
+ 	-->javascript读取了你本地的文件内容
+	-->出于安全原因--js是不能够读取到文件内容的
+	-->Ajax上传，是无法实现的
+	
+	问一些Ajax上传插件是怎么实现的？
+	1:iframe
+	2:用falsh实现的，如swfuplpded
+	3:用html5实现（html5已经增加了文件读取API使ajax上传文件的功能）
+
+现代化的Ajax
+	核心--XML HttpRequest对象，一个专门发送HTTP请求的对象	
+如何时使用XMLHttpRequest做Ajax请求
+	分析：
+	1，如何创建该对象？
+	答：按标准，new XMLHttpRequest()即可得到
+	考虑低版本IE，可以 new ActiveXObject(Mirosoft);
+	2，如果请求后台服务器资源?
+	答：分析HTTP协议，要请求需要明确这样几个因素？
+	1，用什么方法来请求?
+	GET,POST,PUT,DELETE,HEAD
+	2,请求哪个资源
+	3，同步方式--同步异步
+	Ajax
+	Asynchrongus JavaScript and XML
+XHR 详细探讨
+	属性详解
+	如梦何POST数据
+	异步原理
+	
+	返回值类型
+	MLHttpRequest的详细属性
+	responseText服务器的响应的主体信息body信息
+	responseXML: 对于大量的格式化文档可以用XML来传输或交换，由后台程序把数据封装在XML文档时，JS接收XML对象并解析该内容
+	status 是服务器时返回状态码例 200成功，403
+

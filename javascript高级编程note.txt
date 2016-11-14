@@ -1,39 +1,39 @@
-element.normalize();Õâ¸ö·½·¨ÄÜ¹»°ÑÄÚ²¿ÔªËØµÄ½ÚµãºÏ²¢³ÉÒ»¸ö½Úµã
-element.firstChlid;»ñÈ¡ÔªËØµÄÎÄ±¾½Úµã
-element.firstChild.nodeType;½ÚµãÀàĞÍ
-element.firstChild.nodeName;½ÚµãÃû³Æ
-element.firstChild.parent;ÊÇÒ»¸öÔªËØ
-element.firstChild.appendData(text);½«textÌí¼Óµ½½ÚµãµÄÄ©Î²
-element.firstChild.deleteData(offset, count);´ÓoffsetÖ¸¶¨µÄÎ»ÖÃÉ¾³ıcount¸ö½Úµã
-element.firstChild.insetData(offset, text);´ÓoffsetÖ¸¶¨µÄÎ»ÖÃ²åÈëtext
-element.firstChild.replaceData(offset, count, text);ÈËoffset´¦É¾³ıµ½countÎÄ±¾²¢Ìæ»»³Étext
-element.firstChild.splitText(offset);´ÓoffsetÖ¸¶¨µÄÎ»ÖÃ½«µ±Ç°ÎÄ±¾ÇĞ¸î³É¼¸¸öÔªËØ 
-element.firstChild.substringData(offset, count);´ÓoffsetÌáµ½count¸öÎÄ±¾×Ö·û´®
+ï»¿element.normalize();è¿™ä¸ªæ–¹æ³•èƒ½å¤ŸæŠŠå†…éƒ¨å…ƒç´ çš„èŠ‚ç‚¹åˆå¹¶æˆä¸€ä¸ªèŠ‚ç‚¹
+element.firstChlid;è·å–å…ƒç´ çš„æ–‡æœ¬èŠ‚ç‚¹
+element.firstChild.nodeType;èŠ‚ç‚¹ç±»å‹
+element.firstChild.nodeName;èŠ‚ç‚¹åç§°
+element.firstChild.parent;æ˜¯ä¸€ä¸ªå…ƒç´ 
+element.firstChild.appendData(text);å°†textæ·»åŠ åˆ°èŠ‚ç‚¹çš„æœ«å°¾
+element.firstChild.deleteData(offset, count);ä»offsetæŒ‡å®šçš„ä½ç½®åˆ é™¤countä¸ªèŠ‚ç‚¹
+element.firstChild.insetData(offset, text);ä»offsetæŒ‡å®šçš„ä½ç½®æ’å…¥text
+element.firstChild.replaceData(offset, count, text);äººoffsetå¤„åˆ é™¤åˆ°countæ–‡æœ¬å¹¶æ›¿æ¢æˆtext
+element.firstChild.splitText(offset);ä»offsetæŒ‡å®šçš„ä½ç½®å°†å½“å‰æ–‡æœ¬åˆ‡å‰²æˆå‡ ä¸ªå…ƒç´  
+element.firstChild.substringData(offset, count);ä»offsetæåˆ°countä¸ªæ–‡æœ¬å­—ç¬¦ä¸²
 
 
-comment ×¢ÊÍ½Úµã
-	½ÚµãÀàĞÍÎª 8 ÒòÆäÎŞ·¨Í¨¹ıÀàÃûÓëIDÃû³Æ²éÕÒ ¿ÉÒÔÍ¨¹ıÓ®±éÀ÷ËùÓĞµÄÔªËØÀ´²éÕÒ×¢ÊÍµã½Ú
-	ÊôĞÔÓĞnodType nodeName nodeValue parentNode
+comment æ³¨é‡ŠèŠ‚ç‚¹
+	èŠ‚ç‚¹ç±»å‹ä¸º 8 å› å…¶æ— æ³•é€šè¿‡ç±»åä¸IDåç§°æŸ¥æ‰¾ å¯ä»¥é€šè¿‡èµ¢éå‰æ‰€æœ‰çš„å…ƒç´ æ¥æŸ¥æ‰¾æ³¨é‡Šç‚¹èŠ‚
+	å±æ€§æœ‰nodType nodeName nodeValue parentNode
 
 
-½Úµã 
+èŠ‚ç‚¹ 
 	document
-	nodeTypeµÄÖµÎª10;
-	nodeNameµÄÖµÎªdoctypeµÄÃû³Æ;
-	nodeValueµÄÖµÎªnull;
-	parentNodeÊÇdocument;
+	nodeTypeçš„å€¼ä¸º10;
+	nodeNameçš„å€¼ä¸ºdoctypeçš„åç§°;
+	nodeValueçš„å€¼ä¸ºnull;
+	parentNodeæ˜¯document;
 
-½ÚµãdocumentFragment
-	nodeTypeµÄÖµÎª11£»
-	nodeNameµÄÖµÎª"#document-fragment";
-	nodeValueµÄÖµÎªnull
-	parentNodeµÄÖµÎªnull;
-	×Ó½Úµã¿ÉÒÔÊÇelement,processingInstruction, comment, text, CDATASection, EntityReference
+èŠ‚ç‚¹documentFragment
+	nodeTypeçš„å€¼ä¸º11ï¼›
+	nodeNameçš„å€¼ä¸º"#document-fragment";
+	nodeValueçš„å€¼ä¸ºnull
+	parentNodeçš„å€¼ä¸ºnull;
+	å­èŠ‚ç‚¹å¯ä»¥æ˜¯element,processingInstruction, comment, text, CDATASection, EntityReference
 
 	var fragment = document.createDocumentFragment();
-	¿ÉÒÔ±£´æĞèÒªÌí¼Óµ½ÎÄµµÖĞµÄ½Úµã;
+	å¯ä»¥ä¿å­˜éœ€è¦æ·»åŠ åˆ°æ–‡æ¡£ä¸­çš„èŠ‚ç‚¹;
 
-	Àı£º
+	ä¾‹ï¼š
 		var fragment = document.createDocumentFragment();
 	var ul = document.createElement("ul");
 	var ulT = document.createTextNode("sfaasf");
@@ -45,14 +45,14 @@ comment ×¢ÊÍ½Úµã
 	fragment.appendChild(ul);
 	document.body.appendChild(fragment);
 
-½Úµãattr 
-	nodeTypeµÄÖµÎª11;
-	nodeNameµÄÖµÊÇÌØĞÔµÄÃû³Æ;
-	nodeValueµÄÖµÊÇÌØĞÔµÄÖµ;
-	parentNodeµÄÖµÎªnull;
+èŠ‚ç‚¹attr 
+	nodeTypeçš„å€¼ä¸º11;
+	nodeNameçš„å€¼æ˜¯ç‰¹æ€§çš„åç§°;
+	nodeValueçš„å€¼æ˜¯ç‰¹æ€§çš„å€¼;
+	parentNodeçš„å€¼ä¸ºnull;
 	
-	AttrÓĞÈı¸öÊôĞÔname value specified
-	name ÊÇnodeName valueÊÇnodeValue
+	Attræœ‰ä¸‰ä¸ªå±æ€§name value specified
+	name æ˜¯nodeName valueæ˜¯nodeValue
 	var attr = document.createAttribute("align");
 	attr.value = "left";
 	element.setAttributeNode(attr);
@@ -61,7 +61,7 @@ comment ×¢ÊÍ½Úµã
 	element.getAttribute("align" )
 
 
-¶¯Ì¬µÄ´´½¨½Å±¾
+åŠ¨æ€çš„åˆ›å»ºè„šæœ¬
 	var scri = document.getElementsByTagName("script")[0];
 	loadScript("excel.js", scri);
 	function loadScript(url, ro){
@@ -72,7 +72,7 @@ comment ×¢ÊÍ½Úµã
 		document.head.removeChild(ro);
 	}
 
-¶¯Ì¬µÄ´´½¨Ö´ĞĞ½Å±¾
+åŠ¨æ€çš„åˆ›å»ºæ‰§è¡Œè„šæœ¬
 	var script = document.createElement("script");
 	script.type = "text/javascript";
 	var text = "var r = function(){alert('read')}";
@@ -82,7 +82,7 @@ comment ×¢ÊÍ½Úµã
 		script.text = text';
 	}
 
-¶¯Ì¬µÄ´´½¨ÑùÊ½
+åŠ¨æ€çš„åˆ›å»ºæ ·å¼
 	function loadStyles(url){
 		var link = document.createElement("link");
 		link.rel = "stylesheet";
@@ -92,31 +92,31 @@ comment ×¢ÊÍ½Úµã
 		head.appendChild(link);
 	}	
 
-¶¯Ì¬µÄ´´½¨Ö´ĞĞÑùÊ½
+åŠ¨æ€çš„åˆ›å»ºæ‰§è¡Œæ ·å¼
 	function loadStyleString(css){
 		var style = document.createElement("style");
 		style.type = "text/cxx";
 		try{
 			style.appendChild(document.createTextNode(css));
 		}catch(err){
-			// ÔÚÊ¹ÓÃstyleSheet.cssTextÊ±ĞèÒª×¢ÒâÕâ¸ö´úÂëÖØÓÃ»áµ¼ÖÆä¯ÀÀÆ÷±ÀÀ£
+			// åœ¨ä½¿ç”¨styleSheet.cssTextæ—¶éœ€è¦æ³¨æ„è¿™ä¸ªä»£ç é‡ç”¨ä¼šå¯¼åˆ¶æµè§ˆå™¨å´©æºƒ
 			style.styleSheet.cssText = css;
 		}
 		var head = document.getElementsByTagName("haed")[0];
 		head.appendChild(style);
 	}	
 
-±í¸ñ
+è¡¨æ ¼
 
 	var table = document.createElement("table");
 	table.border = 1;
 	table.width = "100%";
 
-	// ´´½¨tbody;
+	// åˆ›å»ºtbody;
 	var tbody = document.createElement("tbody");
 	table.appendChild(tbody);
 
-	// ´´½¨µÚÒ»ĞĞ
+	// åˆ›å»ºç¬¬ä¸€è¡Œ
 	var row1 = document.createElement("tr");
 	tbody.appendChild(row1);
 	var cell1_1 = document.createElement("td");
@@ -126,7 +126,7 @@ comment ×¢ÊÍ½Úµã
 	cell2_1.appendChild(document.createTextNode("Cell 2,1"));
 	row1.appendChild(cell2_1);
 
-	// ´´½¨µÚ¶şĞĞ
+	// åˆ›å»ºç¬¬äºŒè¡Œ
 	var row2 = document.createElement("tr");
 	tbody.appendChild(row2);
 	var tell1_2 = document.createElement("td");
@@ -136,46 +136,46 @@ comment ×¢ÊÍ½Úµã
 	cell2_2.appendChild(document.createTextNode("Cell 2, 2"));
 	row2.appendChild(cell2_2);
 	
-	// ½«±í¸ñÌí¼Óµ½ÎÄµµÖ÷ÌåÖĞ
+	// å°†è¡¨æ ¼æ·»åŠ åˆ°æ–‡æ¡£ä¸»ä½“ä¸­
 	document.body.appendChild(table);
 
-	caption: ±£´æ×Å¶Ô<caption>ÔªËØ£¨Èç¹ûÓĞ£©µÄÖ¸Õë
-	tBodies: ÊÇÒ»¸ö:<tbody>ÔªËØµÄHTMLCollection;
-	tFoot: ±£´æ×Å¶Ô<tfoot>ÔªËØ(Èç¹ûÓĞ)µÄÖ¸Õë
-	tHead: ±£´æ×Å¶Ô<thead>ÔªËØ£¨Èç¹ûÓĞ£©µÄÖ¸Õë
-	rows: ÊÇÒ»¸ö±í¸ñÖĞËùÓĞĞĞµÄHTMLCollection;
-	createTHead(): ´´½¨<thead>ÔªËØ£¬½«Æä·Åµ½±í¸ñÖĞ£¬·µ»ØÒıÓÃ
-	createTFoot(): ´´½¨<tfoot>ÔªËØ£¬½«ÆÚ·Åµ½±í¸ñÖĞ£¬·µ»ØÒıÓÃ
-	createCaption(): ´´½¨<caption>ÔªËØ£¬½«ÆÚ·Åµ½±í¸ñÖĞ£¬·µ»ØÒıÓÃ
-	deleteThead(): É¾³ı<thead>ÔªËØ¡£
-	deleteTFoot: É¾³ı<tfoot>ÔªËØ¡£
-	deleteCaption(): É¾³ı<caption>ÔªËØ
-	deleteRow(pos): É¾³ıÖ¸¶¨Î»ÖÃµÄĞĞ.
-	insertRow(pos): Ïòrows¼¯ºÏÖĞµÄÖ¸¶¨Î»ÖÃ²åÈëÒ»ĞĞ
-	rows: ±£´æ×Å<tbody> ÔªËØÖĞĞĞµÄHTMLCollection¡£
-	deleteRow(pos): É¾³ıÖ¸¶¨Î»ÖÃµÄĞĞ¡£
-	insertRow(pops): Ïòrows ¼¯ºÏÖĞµÄÖ¸¶¨Î»ÖÃ²åÈëÒ»ĞĞ ·µ»ØÒıÓÃ¡¢
-	cells: ±£´æ×Å<tr>ÔªËØÖĞµ¥Ôª¸ñµÄHTMLCollection.
-	deleteCell(pos): É¾³ıÖ¸¶¨Î»µÄµ¥Ôª¸ñ	
-	insertCell(pos): Ïòcells¼¯ºÏÖĞ²åÈëÒ»¸öµ¥Ôª¸ñ ·µ»ØÒıÓÃ
+	caption: ä¿å­˜ç€å¯¹<caption>å…ƒç´ ï¼ˆå¦‚æœæœ‰ï¼‰çš„æŒ‡é’ˆ
+	tBodies: æ˜¯ä¸€ä¸ª:<tbody>å…ƒç´ çš„HTMLCollection;
+	tFoot: ä¿å­˜ç€å¯¹<tfoot>å…ƒç´ (å¦‚æœæœ‰)çš„æŒ‡é’ˆ
+	tHead: ä¿å­˜ç€å¯¹<thead>å…ƒç´ ï¼ˆå¦‚æœæœ‰ï¼‰çš„æŒ‡é’ˆ
+	rows: æ˜¯ä¸€ä¸ªè¡¨æ ¼ä¸­æ‰€æœ‰è¡Œçš„HTMLCollection;
+	createTHead(): åˆ›å»º<thead>å…ƒç´ ï¼Œå°†å…¶æ”¾åˆ°è¡¨æ ¼ä¸­ï¼Œè¿”å›å¼•ç”¨
+	createTFoot(): åˆ›å»º<tfoot>å…ƒç´ ï¼Œå°†æœŸæ”¾åˆ°è¡¨æ ¼ä¸­ï¼Œè¿”å›å¼•ç”¨
+	createCaption(): åˆ›å»º<caption>å…ƒç´ ï¼Œå°†æœŸæ”¾åˆ°è¡¨æ ¼ä¸­ï¼Œè¿”å›å¼•ç”¨
+	deleteThead(): åˆ é™¤<thead>å…ƒç´ ã€‚
+	deleteTFoot: åˆ é™¤<tfoot>å…ƒç´ ã€‚
+	deleteCaption(): åˆ é™¤<caption>å…ƒç´ 
+	deleteRow(pos): åˆ é™¤æŒ‡å®šä½ç½®çš„è¡Œ.
+	insertRow(pos): å‘rowsé›†åˆä¸­çš„æŒ‡å®šä½ç½®æ’å…¥ä¸€è¡Œ
+	rows: ä¿å­˜ç€<tbody> å…ƒç´ ä¸­è¡Œçš„HTMLCollectionã€‚
+	deleteRow(pos): åˆ é™¤æŒ‡å®šä½ç½®çš„è¡Œã€‚
+	insertRow(pops): å‘rows é›†åˆä¸­çš„æŒ‡å®šä½ç½®æ’å…¥ä¸€è¡Œ è¿”å›å¼•ç”¨ã€
+	cells: ä¿å­˜ç€<tr>å…ƒç´ ä¸­å•å…ƒæ ¼çš„HTMLCollection.
+	deleteCell(pos): åˆ é™¤æŒ‡å®šä½çš„å•å…ƒæ ¼	
+	insertCell(pos): å‘cellsé›†åˆä¸­æ’å…¥ä¸€ä¸ªå•å…ƒæ ¼ è¿”å›å¼•ç”¨
 
 	
 	var table = document.createElement("table");
 	table.border = 1;
 	table.width = "100%";
 
-	// ´´½¨tbody;
+	// åˆ›å»ºtbody;
 	var tbody = document.createElement("tbody");
 	table.appendChild(tbody);
 
-	// ´´½¨µÚÒ»ĞĞ
+	// åˆ›å»ºç¬¬ä¸€è¡Œ
 	tbody.insertRow(0);
 	tbody.rows[0].insertCell(0);
 	tbody.rows[0].cells[0].appendChild(document.createTextNode("Cell 1"));
 	tbody.rows[0].insertCell(1);
 	tbody.rows[0].cells[1].appendChild(document.createTextNode("Cell 2"));
 
-	// ´´½¨µÚ¶şĞĞ
+	// åˆ›å»ºç¬¬äºŒè¡Œ
 	tbody.insertRow(1);
 	tbody.rows[1].insertCell(0);
 	tbody.rows[1].cells[0].appendChild(document.createTextNode("Cell 3"));
@@ -185,16 +185,16 @@ comment ×¢ÊÍ½Úµã
 	document.body.appendChild(table)
 
 
-	Óë¿Í»§¹µÍ¨±¾×ÅÁ½¸öÔ­Ôò
-	1£¬¿¼ÂÇ¿Í»§ĞèÇó
-	2£¬¿¼ÂÇ×ÔÉíÀûÒæ
+	ä¸å®¢æˆ·æ²Ÿé€šæœ¬ç€ä¸¤ä¸ªåŸåˆ™
+	1ï¼Œè€ƒè™‘å®¢æˆ·éœ€æ±‚
+	2ï¼Œè€ƒè™‘è‡ªèº«åˆ©ç›Š
 
 
-DOMÀ©Õ¹
+DOMæ‰©å±•
 	document.querySelector("body");
-	²éÕÒAPI¼æÈİ¾­²âÊÔÄÜ¼æÈİÖ÷Á÷ä¯ÀÀÆ÷
-	document.querySelectorAll("p") ²éÕÒËùÓĞµÄp±êÇ©
-	// DOMÈ·ÈÏAPI
+	æŸ¥æ‰¾APIå…¼å®¹ç»æµ‹è¯•èƒ½å…¼å®¹ä¸»æµæµè§ˆå™¨
+	document.querySelectorAll("p") æŸ¥æ‰¾æ‰€æœ‰çš„pæ ‡ç­¾
+	// DOMç¡®è®¤API
 	function matchesSelector(element, selector){
 		if(element.matchesSelector){
 			return element.matchesSelector(selector);
@@ -209,11 +209,11 @@ DOMÀ©Õ¹
 		}
 	}
 	
-	element.childElementCount ·µ»Ø×ÓÔªËØ¸öÊı²»°üÀ¨ÎÄ±¾¸ú×¢ÊÍ½Úµã
-	element.firstElementChild Ö¸ÏòµÚÒ»¸ö×ÓÔªËØ
-	element.lastElementChild Ö¸Ïò×îºóÒ»¸ö×ÓÔªËØ
-	previousElementSibling Ö¸ÏòÇ°Ò»¸öÍ¬±²ÔªËØ
-	nextElementSibling Ö¸ÏòºóÒ»¸öÍ¬±²ÔªËØ
+	element.childElementCount è¿”å›å­å…ƒç´ ä¸ªæ•°ä¸åŒ…æ‹¬æ–‡æœ¬è·Ÿæ³¨é‡ŠèŠ‚ç‚¹
+	element.firstElementChild æŒ‡å‘ç¬¬ä¸€ä¸ªå­å…ƒç´ 
+	element.lastElementChild æŒ‡å‘æœ€åä¸€ä¸ªå­å…ƒç´ 
+	previousElementSibling æŒ‡å‘å‰ä¸€ä¸ªåŒè¾ˆå…ƒç´ 
+	nextElementSibling æŒ‡å‘åä¸€ä¸ªåŒè¾ˆå…ƒç´ 
 
 	
 	var i,
@@ -234,12 +234,12 @@ DOMÀ©Õ¹
 	}
 	
 
-ÀàµÄ²Ù×÷
+ç±»çš„æ“ä½œ
 	var div = document.getElementsByClassName("user name");	
 	var classNames = div.className.split(/\s+/);
 
 
-	// ÕÒµ½ÒªÉ¾µÄÀàÃû
+	// æ‰¾åˆ°è¦åˆ çš„ç±»å
 	var pos = -1,
 		i,
 		len;
@@ -251,52 +251,52 @@ DOMÀ©Õ¹
 	
 	classNames.splice(i, 1);
 	
-	// Í¨¹ıdocument.getElementsByClassName()Õâ¸ö·½·¨»ñÈ¡µ½µÄÔªËØ»áÓĞÒ»¸öclassListµÄÊôĞÔ±£´æ×ÅËùÓĞµÄÀàÃûÆäÀàÃûÓĞÒÔÏÂ¼¸ÖÖ²Ù×÷·½·¨
-	add(value)£º½«¸ø¶¨µÄ×Ö·û´®ÖµÌí³µµ½ÁĞ±íÖĞ£¬Èç¹ûÖµ´æÔÚ¾Í²»Ìí¼Ó
-	contains(value): ±íÊ¾ÁĞ±íÖĞÊÇ·ñ¸ø¶¨´æÔÚµÄÖµ£¬Èç¹û´æÔÚ·µ»Øtrue£¬·ñÔò·µ»Øfalse
-	remove(value): ´ÓÁĞ±íÖĞÉ¾³ı¸ø¶¨µÄ×Ö·û´®
-	toggle(value): Èç¹ûÁĞ±íÖĞÒÑ´æÔÚµÄÖµ¾ÍÉ¾³ıËû·ñÔò¾ÍÌí¼Ó
+	// é€šè¿‡document.getElementsByClassName()è¿™ä¸ªæ–¹æ³•è·å–åˆ°çš„å…ƒç´ ä¼šæœ‰ä¸€ä¸ªclassListçš„å±æ€§ä¿å­˜ç€æ‰€æœ‰çš„ç±»åå…¶ç±»åæœ‰ä»¥ä¸‹å‡ ç§æ“ä½œæ–¹æ³•
+	add(value)ï¼šå°†ç»™å®šçš„å­—ç¬¦ä¸²å€¼æ·»è½¦åˆ°åˆ—è¡¨ä¸­ï¼Œå¦‚æœå€¼å­˜åœ¨å°±ä¸æ·»åŠ 
+	contains(value): è¡¨ç¤ºåˆ—è¡¨ä¸­æ˜¯å¦ç»™å®šå­˜åœ¨çš„å€¼ï¼Œå¦‚æœå­˜åœ¨è¿”å›trueï¼Œå¦åˆ™è¿”å›false
+	remove(value): ä»åˆ—è¡¨ä¸­åˆ é™¤ç»™å®šçš„å­—ç¬¦ä¸²
+	toggle(value): å¦‚æœåˆ—è¡¨ä¸­å·²å­˜åœ¨çš„å€¼å°±åˆ é™¤ä»–å¦åˆ™å°±æ·»åŠ 
 
-½¹µã¹ÜÀí
+ç„¦ç‚¹ç®¡ç†
 	var buton = document.getElementsByTagName("button");
 	button.focus();
 	alert(document.activeElement === button); // true
 
-	// ¿ÉÒÔÅĞ¶ÏÔªËØÊÇ·ñ´¦Àí½¹µã×´Ì¬
+	// å¯ä»¥åˆ¤æ–­å…ƒç´ æ˜¯å¦å¤„ç†ç„¦ç‚¹çŠ¶æ€
 	document.hasFocus();
 
 	
-	// documentÓĞreadyStateÊôĞÔ£¬Õâ¸öÊôĞÔµÄÖµÓĞÁ½ÖÖ£¬µÚÒ»ÖÖÎªloading,ÕıÔÚ¼ÓÔØÎÄµµ,complete£¬ÒÑ¾­¼ÓÔØÎÄµµ
+	// documentæœ‰readyStateå±æ€§ï¼Œè¿™ä¸ªå±æ€§çš„å€¼æœ‰ä¸¤ç§ï¼Œç¬¬ä¸€ç§ä¸ºloading,æ­£åœ¨åŠ è½½æ–‡æ¡£,completeï¼Œå·²ç»åŠ è½½æ–‡æ¡£
 	if(document.readyState == "complete"){
-		// Ö´ĞĞ²Ù×÷
+		// æ‰§è¡Œæ“ä½œ
 	}
 	
-¼æÈİÄ£Ê½
-	// document.compatMode ÓĞÁ½¸öÖµÎªCSS1CompatÊÇ±ê×¼Ä£Ê½£¬BackCompatÊÇ»ìÔÓÄ£Ê½
+å…¼å®¹æ¨¡å¼
+	// document.compatMode æœ‰ä¸¤ä¸ªå€¼ä¸ºCSS1Compatæ˜¯æ ‡å‡†æ¨¡å¼ï¼ŒBackCompatæ˜¯æ··æ‚æ¨¡å¼
 	if(document.compatMode == "CSS1Compat"){
 		alert("Standards mode");
 	}else{
 		alert("Quirks mode")
 	}
 
-×Ö·û¼¯ÊôĞÔ
-	// document.charset ¿ÉÒÔ»ñÈ¡ÓëÉèÖÃÍøÒ³×Ö·û¼¯£¬
-	// Èç¹ûÔÚheadÀïÉèÖÃÁËcharsetµÄ¸ñÊ½£¬ÄÇÃ´Õâ¸öÊôĞÔÖ»ÄÜ»ñÈ¡charset¸ñÊ½
+å­—ç¬¦é›†å±æ€§
+	// document.charset å¯ä»¥è·å–ä¸è®¾ç½®ç½‘é¡µå­—ç¬¦é›†ï¼Œ
+	// å¦‚æœåœ¨headé‡Œè®¾ç½®äº†charsetçš„æ ¼å¼ï¼Œé‚£ä¹ˆè¿™ä¸ªå±æ€§åªèƒ½è·å–charsetæ ¼å¼
 	
 
-// ×Ô¶¨ÒåÊı¾İÊôĞÔ
+// è‡ªå®šä¹‰æ•°æ®å±æ€§
 	<div id="myDiv" data-appId = "12345" data-myname = "Nicholas"></div>
 		var div = document.getElementById("myDiv");
 	
-	// È¡µÃ×Ô¶¨ÒåÊôĞÔµÄÖµ
+	// å–å¾—è‡ªå®šä¹‰å±æ€§çš„å€¼
 	var appId = div.dataset.appId;
 	var myName = div.dataset.myname;
 	
-	// ÉèÖÃÖµ
+	// è®¾ç½®å€¼
 	div.dataset.appId = 23456;
 	div.dataset.myname = "Michael";
 
-	// ÓĞÃ»ÓĞ"myname"ÖµÄØ
+	// æœ‰æ²¡æœ‰"myname"å€¼å‘¢
 	if(div.dataset.myname){
 		alert("hello ," + div.dataset.myname);
 	}
@@ -304,79 +304,79 @@ DOMÀ©Õ¹
 // innerHTML 
 	<div id="content">hello &amp; welcome, <b>&quot;reader&quot;!</b></div>
 	var div = document.getElementById("content");
-	// ÒòÎªinnerHTMLÊÇÎªC++±àĞ´µÄ£¬ËùÒÔÔËĞĞËÙ¶È»á¸ü¿ì£¬»á¸üÕ¼ÄÚ´æ£¬ËùÓĞ¾¡¿ÉÄÜµÄÉÙÓÃinnerHTML
-	// ÓÃinnerHTMLÌí¼ÓscriptÊ±ĞèÒªÓĞÓòÖ§³ÖÒòÎªÓÃinnerHTML´´½¨³öÀ´µÄÔªËØÊÇÃ»ÓĞÓòµÄËùÒÔÓĞÒÔÏÂÈıÖÖ·½·¨À´´¦ÀíÕâÖÖÓòµÄ´¦Àí
+	// å› ä¸ºinnerHTMLæ˜¯ä¸ºC++ç¼–å†™çš„ï¼Œæ‰€ä»¥è¿è¡Œé€Ÿåº¦ä¼šæ›´å¿«ï¼Œä¼šæ›´å å†…å­˜ï¼Œæ‰€æœ‰å°½å¯èƒ½çš„å°‘ç”¨innerHTML
+	// ç”¨innerHTMLæ·»åŠ scriptæ—¶éœ€è¦æœ‰åŸŸæ”¯æŒå› ä¸ºç”¨innerHTMLåˆ›å»ºå‡ºæ¥çš„å…ƒç´ æ˜¯æ²¡æœ‰åŸŸçš„æ‰€ä»¥æœ‰ä»¥ä¸‹ä¸‰ç§æ–¹æ³•æ¥å¤„ç†è¿™ç§åŸŸçš„å¤„ç†
 	div.innerHTML = "_<script defer>alert('hi')<\/script>";
 	div.innerHTML = "<div>&nbsp;</div><script defer>alert('hi')<\/script>"
 	div.innerHTML = "<input type=\"hidden\"><script>alert('hi')<\/script>"
 
-	// ÔÚIE8ÒÔÇ°styleÒ²ÊÇÒ»¸öÃ»ÓĞÓòµÄÔªËØËùÒÔÒ²¿ÉÒÔÍ¨¹ıÒÔÉÏ·½·¨À´Ìí¼ÓÓò
-	»¹ÓĞÒ»Ğ©ÔªËØ²»Ö§³ÖinnerHTMLÀıÈç<col>,<colgroup>,<framese>,<head>,<html>,<style>,
+	// åœ¨IE8ä»¥å‰styleä¹Ÿæ˜¯ä¸€ä¸ªæ²¡æœ‰åŸŸçš„å…ƒç´ æ‰€ä»¥ä¹Ÿå¯ä»¥é€šè¿‡ä»¥ä¸Šæ–¹æ³•æ¥æ·»åŠ åŸŸ
+	è¿˜æœ‰ä¸€äº›å…ƒç´ ä¸æ”¯æŒinnerHTMLä¾‹å¦‚<col>,<colgroup>,<framese>,<head>,<html>,<style>,
 	<table>,<tbody>,<thead>,<tfoot>,<tr>,<title>
 
 // toStaticHTML fn
-	// Ö»ÓĞIE8²ÅÖ§³ÖÕâ¸ö·½·¨
+	// åªæœ‰IE8æ‰æ”¯æŒè¿™ä¸ªæ–¹æ³•
 	var text = "<a href=\"javascript:;\" onclick=\"alert('hi')\">Click ME</a>";
 	var sanitized = window.toStaticHTML(text);
 	alert(sanitized);
 
 // outerHTML
-	Ê¹ÓÃ·½·¨Í¬innerHTML,²»Í¬µÄÊÇouterHTML »áÌæ»»µ±Ç°µ÷ÓÃ´Ë·½·¨µÄÔªËØ
+	ä½¿ç”¨æ–¹æ³•åŒinnerHTML,ä¸åŒçš„æ˜¯outerHTML ä¼šæ›¿æ¢å½“å‰è°ƒç”¨æ­¤æ–¹æ³•çš„å…ƒç´ 
 
 // insertAdjacentHTML();
 
-	"beforebegin":ÔÚµ±Ç°ÔªËØÖ®Ç°²åÈëÒ»¸ö½ôÁÚµÄÍ¬±²ÔªËØ
-	"afterbegin":ÔÚµ±Ç°ÔªËØÖ®ÏÂ²åÈëÒ»¸öĞÂµÄ×ÓÔªËØ»òÔÚµÚÒ»¸ö×ÓÔªËØÖ®Ç°ÔÙ²åÈë×ÓÔªËØ
-	"beforeend":ÔÚµ±Ç°ÔªËØÖ®ÏÂ²åÈëÒ»¸öĞÂµÄ×ÓÔªËØ»òÔÚ×îºóÒ»¸ö×ÓÔªËØÖ®ºóÔÙ²åÈë×ÓÔªËØ
-	"afterend":ÔÚµ±Ç°ÔªËØÖ®ºó²åÈëÒ»¸ö½ôÁÚµÄÍ¬±²ÔªËØ
+	"beforebegin":åœ¨å½“å‰å…ƒç´ ä¹‹å‰æ’å…¥ä¸€ä¸ªç´§é‚»çš„åŒè¾ˆå…ƒç´ 
+	"afterbegin":åœ¨å½“å‰å…ƒç´ ä¹‹ä¸‹æ’å…¥ä¸€ä¸ªæ–°çš„å­å…ƒç´ æˆ–åœ¨ç¬¬ä¸€ä¸ªå­å…ƒç´ ä¹‹å‰å†æ’å…¥å­å…ƒç´ 
+	"beforeend":åœ¨å½“å‰å…ƒç´ ä¹‹ä¸‹æ’å…¥ä¸€ä¸ªæ–°çš„å­å…ƒç´ æˆ–åœ¨æœ€åä¸€ä¸ªå­å…ƒç´ ä¹‹åå†æ’å…¥å­å…ƒç´ 
+	"afterend":åœ¨å½“å‰å…ƒç´ ä¹‹åæ’å…¥ä¸€ä¸ªç´§é‚»çš„åŒè¾ˆå…ƒç´ 
 
-	// ×÷ÎªÇ°Ò»¸öÍ¬±²ÔªËØ²åÈë
+	// ä½œä¸ºå‰ä¸€ä¸ªåŒè¾ˆå…ƒç´ æ’å…¥
 	element.insertAdjecntHTML("beforebegin" "<p>hello world!</p>");
 
-	// ×÷ÎªµÚÒ»¸ö×ÓÔªËØ²åÈë
+	// ä½œä¸ºç¬¬ä¸€ä¸ªå­å…ƒç´ æ’å…¥
 	element.insertAdjecntHTML("afterbegin", "<p>Hello world!</p>");
 
-	// ×÷Îª×îºóÒ»¸ö×ÓÔªËØ²åÈë
+	// ä½œä¸ºæœ€åä¸€ä¸ªå­å…ƒç´ æ’å…¥
 	element.insertAdjacentHTML("beforeend", "<p>hello world!</p>");
 	
-	// ×÷ÎªºóÒ»¸öÍ¬±²ÔªËØ²åÈë
+	// ä½œä¸ºåä¸€ä¸ªåŒè¾ˆå…ƒç´ æ’å…¥
 	element.insertAdjacentHTML("afterend", "<p>Hello world!</p>");
 
 // scrollIntoView()
-	// °Ñ¿ÉÊÓ´°¿Úµ÷µ½µÚÒ»¸öformµÄÎ»ÖÃ
+	// æŠŠå¯è§†çª—å£è°ƒåˆ°ç¬¬ä¸€ä¸ªformçš„ä½ç½®
 	document.forms[0].scrollIntoView();
 	
-// ÎÄµµÄ£Ê½
-	// contentµÄÖµ¿ÉÒÔÎªÒÔÏÂ¼¸ÖÖ
-	Edge: Ê¼ÖÕÒÔ×îĞÂµÄÎÄµµÄ£Ê½À´äÖÈ¾Ò³Ãæ£¬ºöÂÔÎÄµµÀàĞÍÉùÃ÷£¬¶ÔÓÚIE8£¬Ê¼ÖÕ±£³ÖIE8µÄ±ê×¼Ä£Ê½äÖÈ¾Ò³Ãæ£¬¶ÔÓÚIE9£¬ÔòÒÔIE9µÄ±ê×¼Ä£Ê½äÖÈ¾Ò³Ãæ
-	EmulateIE9: Èç¹ûÓĞÎÄµµÀàĞÍÉùÃ÷£¬ÔòÒÔIE9±ê×¼Ä£Ê½äÖÈ¾Ò³Ãæ
-	EmulateIE8: Èç¹ûÓĞÎÄµµÀàĞÍÉùÃ÷£¬ÔòÒÔIE8±ê×¼Ä£Ê½äÖÈ¾Ò³Ãæ
-	EmulateIE7: Èç¹ûÓĞÎÄµµÀàĞÍÉùÃ÷£¬ÔòÒÔIE7±ê×¼Ä£Ê½äÖÈ¾Ò³Ãæ
-	9: Ç¿ÖÆÒÔIE9±ê×¼Ä£Ê½äÖÈ¾Ò³Ãæ£¬ºöÂÔÎÄµµÀàĞÍÉùÃ÷
-	8: Ç¿ÖÆÒÔIE8±ê×¼Ä£Ê½äÖÈ¾Ò³Ãæ£¬ºöÂÔÎÄµµÀàĞÍÉùÃ÷
-	7: Ç¿ÖÆÒÔIE7±ê×¼Ä£Ê½äÖÈ¾Ò³Ãæ£¬ºöÂÔÎÄµµÀàĞÍÉùÃ÷
-	// ie6ÎŞ·¨Í¨¹ı´ËÖÖÀàĞÍÉèÖÃ
-	5: Ç¿ÖÆ½«µ±Ä£Ê½ÉèÎªIE5£¬ºöÂÔÀàĞÍÉùÃ÷
+// æ–‡æ¡£æ¨¡å¼
+	// contentçš„å€¼å¯ä»¥ä¸ºä»¥ä¸‹å‡ ç§
+	Edge: å§‹ç»ˆä»¥æœ€æ–°çš„æ–‡æ¡£æ¨¡å¼æ¥æ¸²æŸ“é¡µé¢ï¼Œå¿½ç•¥æ–‡æ¡£ç±»å‹å£°æ˜ï¼Œå¯¹äºIE8ï¼Œå§‹ç»ˆä¿æŒIE8çš„æ ‡å‡†æ¨¡å¼æ¸²æŸ“é¡µé¢ï¼Œå¯¹äºIE9ï¼Œåˆ™ä»¥IE9çš„æ ‡å‡†æ¨¡å¼æ¸²æŸ“é¡µé¢
+	EmulateIE9: å¦‚æœæœ‰æ–‡æ¡£ç±»å‹å£°æ˜ï¼Œåˆ™ä»¥IE9æ ‡å‡†æ¨¡å¼æ¸²æŸ“é¡µé¢
+	EmulateIE8: å¦‚æœæœ‰æ–‡æ¡£ç±»å‹å£°æ˜ï¼Œåˆ™ä»¥IE8æ ‡å‡†æ¨¡å¼æ¸²æŸ“é¡µé¢
+	EmulateIE7: å¦‚æœæœ‰æ–‡æ¡£ç±»å‹å£°æ˜ï¼Œåˆ™ä»¥IE7æ ‡å‡†æ¨¡å¼æ¸²æŸ“é¡µé¢
+	9: å¼ºåˆ¶ä»¥IE9æ ‡å‡†æ¨¡å¼æ¸²æŸ“é¡µé¢ï¼Œå¿½ç•¥æ–‡æ¡£ç±»å‹å£°æ˜
+	8: å¼ºåˆ¶ä»¥IE8æ ‡å‡†æ¨¡å¼æ¸²æŸ“é¡µé¢ï¼Œå¿½ç•¥æ–‡æ¡£ç±»å‹å£°æ˜
+	7: å¼ºåˆ¶ä»¥IE7æ ‡å‡†æ¨¡å¼æ¸²æŸ“é¡µé¢ï¼Œå¿½ç•¥æ–‡æ¡£ç±»å‹å£°æ˜
+	// ie6æ— æ³•é€šè¿‡æ­¤ç§ç±»å‹è®¾ç½®
+	5: å¼ºåˆ¶å°†å½“æ¨¡å¼è®¾ä¸ºIE5ï¼Œå¿½ç•¥ç±»å‹å£°æ˜
 	<meta http-equiv="X-UA-Compatible" content="ie=IEVersion">
-	// ´ËÊôĞÔ¿ÉÒÔ»ñÈ¡ä¯ÀÀÆ÷µÄÎÄµµÄ£Ê½
+	// æ­¤å±æ€§å¯ä»¥è·å–æµè§ˆå™¨çš„æ–‡æ¡£æ¨¡å¼
 	var mode = document.documentMode;
 
 // children
-	// Õâ¸öÊôĞÔ³öÏÖµÄÔ­ÒòÊÇÒòÎªä¯ÀÀÆ÷ÔÚ´¦ÀíÎÄ±¾½ÚµãÖĞµÄ¿Õ°×·ûÊ±ÓĞ²îÒì£¬Õâ¸öÊôóÓÊÇHTMLCollectionµÄÊµÀı
-	// Õâ¸öÊôĞÔÓëchildNodesÃ»Ê²Ã´Çø±ğ¡¡
+	// è¿™ä¸ªå±æ€§å‡ºç°çš„åŸå› æ˜¯å› ä¸ºæµè§ˆå™¨åœ¨å¤„ç†æ–‡æœ¬èŠ‚ç‚¹ä¸­çš„ç©ºç™½ç¬¦æ—¶æœ‰å·®å¼‚ï¼Œè¿™ä¸ªå±ç¬¥æ˜¯HTMLCollectionçš„å®ä¾‹
+	// è¿™ä¸ªå±æ€§ä¸childNodesæ²¡ä»€ä¹ˆåŒºåˆ«ã€€
 	element.children.length;
 	element.children[0]
 
-// document.body.contains(element) ÅĞ¶ÏÎŞËØÊÇ·ñÔÚbodyÄÚ£¬Èç¹ûÔÚµÄ»°·µ»ØTRUE£¬·ñÔò·µ»Øfalse
+// document.body.contains(element) åˆ¤æ–­æ— ç´ æ˜¯å¦åœ¨bodyå†…ï¼Œå¦‚æœåœ¨çš„è¯è¿”å›TRUEï¼Œå¦åˆ™è¿”å›false
 
 
-// document.body.compareDocumentPosition(element); ´Ë·½·¨¿ÉÒÔÈ·ÈÏ½Úµãelement Óëdocument.bodyµÄ¹ØÏµ·µ»ØÖµ 
-	1: ÎŞ¹Ø
-	2£º¾ÓÇ°
-	4£º¾Óºó
-	8£º°üº¬£¬ÊÇÉÏ¼¶ÔªËØ
-	16£º±»°üº¬µÄ×ÓÔªËØ
-	20: ±»°üº¬µÄ×ÓÔªËØ
+// document.body.compareDocumentPosition(element); æ­¤æ–¹æ³•å¯ä»¥ç¡®è®¤èŠ‚ç‚¹element ä¸document.bodyçš„å…³ç³»è¿”å›å€¼ 
+	1: æ— å…³
+	2ï¼šå±…å‰
+	4ï¼šå±…å
+	8ï¼šåŒ…å«ï¼Œæ˜¯ä¸Šçº§å…ƒç´ 
+	16ï¼šè¢«åŒ…å«çš„å­å…ƒç´ 
+	20: è¢«åŒ…å«çš„å­å…ƒç´ 
 function contains(refNode, otherNode){
 	if(typeof refNode.contains == "function" && (!client.engine.webkit || client.engine.webkit >= 522)){
 		return refNode.contains(otherNode);
@@ -395,7 +395,7 @@ function contains(refNode, otherNode){
 	};
 }
 
-// document.body.innerText ¶¨ÒåÎÄ±¾½ÚµãÄÚÈİ
+// document.body.innerText å®šä¹‰æ–‡æœ¬èŠ‚ç‚¹å†…å®¹
 
 	function setInnerText(element, text){
 		if((typeof element.textContent).toLowerCase == "string"){
@@ -406,32 +406,119 @@ function contains(refNode, otherNode){
 	};
 
 // scrollIntoView();
-	// ´Ë·½·¨µÄ¼æÈİĞÔ²î
-	scrollIntoViewIfNeeded(); // Ö»ÔÚµ±Ç°ÔªËØÔÚÊÓ¿ÚÖĞ²»¿É¼ûµÄÇé¿öÏÂ²Å¹ö¶¯ä¯ÀÀÆ÷´°¿Ú»ò£¬ÈİÆ÷ÔªËØ£¬×îÖÕÈÃËü¿É¼û£¬Èç¹ûµ±Ç°ÔªËØÔÚÊÓ¿Ú¿É¼û£¬Õâ¸ö·½·¨Ê²Ã´Ò²²»×öÈç¹û´«Èë²ÎÊıtrueÔò»áÊ¹ÔªËØ¾ÓÖĞ
-	scrollByLines(lineCount) :½«ÔªËØµÄÄÚÈİ¹ö¶¯Ö¸¶¨µÄĞĞ¸ß ¿ÉÒÔÎª + -Öµ 
-	scrollByPages(pageCount): ½«ÔªËØÄÚÈİ¹ö¶¯Ö¸¶¨µÄÒ³Ãæ¸ß¶È£¬¾ßÌå¸ß¶ÈÓÉÔªËØµÄ¸ß¶È¾ö¶¨;
-// document.implementation.hasFeature("Core", "3.0") ¿ÉÒÔ¼ì²âµ±Ç°DOMµÄºËĞÄµÄ¼¶±ğÒ²¿ÉÒÔ¼ì²â HTML Views XML
+	// æ­¤æ–¹æ³•çš„å…¼å®¹æ€§å·®
+	scrollIntoViewIfNeeded(); // åªåœ¨å½“å‰å…ƒç´ åœ¨è§†å£ä¸­ä¸å¯è§çš„æƒ…å†µä¸‹æ‰æ»šåŠ¨æµè§ˆå™¨çª—å£æˆ–ï¼Œå®¹å™¨å…ƒç´ ï¼Œæœ€ç»ˆè®©å®ƒå¯è§ï¼Œå¦‚æœå½“å‰å…ƒç´ åœ¨è§†å£å¯è§ï¼Œè¿™ä¸ªæ–¹æ³•ä»€ä¹ˆä¹Ÿä¸åšå¦‚æœä¼ å…¥å‚æ•°trueåˆ™ä¼šä½¿å…ƒç´ å±…ä¸­
+	scrollByLines(lineCount) :å°†å…ƒç´ çš„å†…å®¹æ»šåŠ¨æŒ‡å®šçš„è¡Œé«˜ å¯ä»¥ä¸º + -å€¼ 
+	scrollByPages(pageCount): å°†å…ƒç´ å†…å®¹æ»šåŠ¨æŒ‡å®šçš„é¡µé¢é«˜åº¦ï¼Œå…·ä½“é«˜åº¦ç”±å…ƒç´ çš„é«˜åº¦å†³å®š;
+// document.implementation.hasFeature("Core", "3.0") å¯ä»¥æ£€æµ‹å½“å‰DOMçš„æ ¸å¿ƒçš„çº§åˆ«ä¹Ÿå¯ä»¥æ£€æµ‹ HTML Views XML
 var supportsDOM2Core = document.implementation.hasFeature("Core", "2.0");
 var supportsDOM3Core = document.implementation.hasFeature("Core", "3.0");
 var supportsDOM2HTML = document.implementation.hasFeature("HTML", "2.0");
 var supportDOM2Views = document.implementation.hasFeature("Views", "2.0");
 var supportsDOM2XML = document.implementation.hasFeature("XML", "2.0");
-console.log("DOM2¼¶ " + supportsDOM2Core);
-console.log("DOM3¼¶ " + supportsDOM3Core);
-console.log("DOM2¼¶ µÄhtml " + supportsDOM2Core);
-console.log("DOM2¼¶ µÄÊÓÍ¼" + supportDOM2Views);
-console.log("DOM2¼¶ µÄXML" + supportsDOM2XML);
-console.log("DOM2¼¶ µÄXML" + supportsDOM2XML);
+console.log("DOM2çº§ " + supportsDOM2Core);
+console.log("DOM3çº§ " + supportsDOM3Core);
+console.log("DOM2çº§ çš„html " + supportsDOM2Core);
+console.log("DOM2çº§ çš„è§†å›¾" + supportDOM2Views);
+console.log("DOM2çº§ çš„XML" + supportsDOM2XML);
+console.log("DOM2çº§ çš„XML" + supportsDOM2XML);
 
-// htmlÃüÃû¿Õ¼ä
+// htmlå‘½åç©ºé—´
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<title>www.name</title>
 	</head>
-	 	<!-- SVG ÊôÓÚ±ğÒ»¸öÃüÃû×Ö¼ä½«svg±êÊ¶ÎªÓë°üº¬ÎÄµµÎŞ¹ØµÄÔªËØ -->
+	 	<!-- SVG å±äºåˆ«ä¸€ä¸ªå‘½åå­—é—´å°†svgæ ‡è¯†ä¸ºä¸åŒ…å«æ–‡æ¡£æ— å…³çš„å…ƒç´  -->
 	<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBos="0 0 100 100" style="widht: 100%;hegiht: 100%">
 		
 		<rect x="0" y="0" width="100" height="100" style="fill:red"></rect>
 		
 	</svg>
 </html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Example XHTML page</title>
+	</head>
+	<body>
+		<s:svg xmlns:s="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 100 100" style="widht: 100%;height: 100%">
+		<s:rect x="0" y="0" width="100" height="100" style="fill:red"></s:rect>
+		</s:svg>
+		<script type="text/javascript">
+			document.body.children[0].localName// å‘½åç©ºé—´çš„èŠ‚ç‚¹åç§°
+			document.body.children[0].namespaceURI // å‘½åç©ºé—´çš„URIæˆ–éƒ½null
+			document.body.children[0].prefix // å‘½åç©ºé—´çš„å‰ç¼€æˆ–è€…null
+			document.body.isDefaultNamespace(namespaceURI);// å¦‚æœå½“å‰èŠ‚ç‚¹çš„é»˜è®¤å‘½åç©ºé—´çš„æƒ…å†µä¸‹è¿”å›true
+			document.body.lookupNamespaceURI(prefix); // è¿”å›ç»™å®šçš„namespaceURIçš„å‰ç¼€ chromeæµ‹ è¯•æ˜¯è¿”å›null
+			document.body.children[0].lookupPrefix("http://www.w3.org/2000/svg");// è¿”å›å‘½åç©ºé—´
+			document.body.lookupNamespaceURI("s");// è¿”å›å‘½åç©ºé—´é“¾æ¥
+		</script>
+	</body>
+</html>
+
+// Documentç±»å‹çš„å˜åŒ–
+	createElementNS(namespaceURI, tagName); // ä½¿ç”¨ç»™å®šçš„tagNameåˆ›å»ºä¸€ä¸ªå±äºå‘½åç©ºé—´namespaceURIçš„æ–°å…ƒç´ 
+
+	createAttributeNS(namespacceURI, attributeName); // ä½¿ç”¨ç»™å®šçš„attributeNameåˆ›å»ºä¸€ä¸ªå±äºå‘½åç©ºé—´namespaceURIçš„æ–°ç‰¹æ€§
+	
+	getElementsByTagNameNS(namespaceURI, tagName); // è¿”å›å±äºå‘½åç©ºé—´namespaceURIçš„tagNameå…ƒç´ çš„NodeList.
+
+
+
+
+	//  åˆ›å»ºä¸€ä¸ªå±äºæŸä¸ªå‘½åç©ºé—´çš„æ–°ç‰¹æ€§
+	var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+
+	// åˆ›å»ºä¸€ä¸ªå±äºæŸä¸ªå‘½åç©ºé—´çš„æ–°ç‰¹æ€§
+	var att = document.createAttributeNS("http://www.somewhere.com", "random");
+
+	// å–å¾—æ‰€æœ‰XHTMLå…ƒç´ 
+	var elems = document.getElementsByTagNameNS("http://www.w3.org/1999/xhtml", "*")
+
+
+// Elementç±»å‹çš„å˜åŒ–
+	getAttributeNS(namespaceURI, localName);// å–å¾—å±äºå‘½åç©ºé—´namespaceURIä¸”åä¸ºlocalNameçš„ç‰¹æ€§
+	getAttributeNodeNS(namespaceURI, tagName); //å–å¾—å±äºå‘½åç©ºé—´namespaceURI ä¸”åä¸ºlocalNameçš„ç‰¹æ€§èŠ‚ç‚¹
+	getElementsByTagNameNS(namespaceURI,tagName); // è¿”å›å±äºå‘½åç©ºé—´namespaceURIçš„tagNameå…ƒç´ çš„NodeList.
+	hasAttributeNS(namespaceURI, localName); //ç¡®å®šå½“å‰å…ƒç´ æ˜¯å¦æœ‰ä¸€ä¸ªåä¸ºlocalNameçš„ç‰¹æ€§ï¼Œè€Œä¸”è¯¥ç‰¹æ€§çš„å‘½åç©ºé—´æ˜¯namespaceURI.æ³¨æ„ï¼Œâ€œDOM2çº§æ ¸å¿ƒâ€ä¹Ÿå¢åŠ äº†ä¸€ä¸ªhasAttribute()æ–¹æ³•ï¼Œç”¨ä¸è€ƒè™‘å‘½åç©ºé—´çš„æƒ…å†µã€‚
+	removeAttributeNS(namespaceURI, localName);// åˆ é™¤å±äºå‘½åç©ºé—´namespaceURIä¸”åä¸ºlocalNameçš„ç‰¹æ€§
+	setAttributeNS(namespaceURI, qualifiedName,value); // è®¾ç½®å±äºå‘½åç©ºé—´namespaceURIä¸”åä¸ºqualifiedNameçš„ç‰¹æ€§çš„å€¼ä¸ºvalue
+	setAttributeNodeNS(attNode);// è®¾ç½®å±äºå‘½åç©ºé—´namespaceURIçš„ç‰¹æ€§èŠ‚ç‚¹
+// NamedNodeMapç±»å‹çš„å˜åŒ–
+	getNamedItemNS(namespaceURI, localName); // å–å¾—å±äºå‘½åç©ºé—´namespaceURI, ä¸”åä¸ºlocalNameçš„é¡¹
+	removeNamedItemNS(namespaceURI, localName); // ç§»é™¤å±äºå‘½åç©ºé—´nmespaceURI, ä¸”åä¸ºlocalNameçš„é¡¹
+	setNamedItemNS(node); // æ·»åŠ node,è¿™ä¸ªèŠ‚ç‚¹å·²ç»äº‹å…ˆæŒ‡å®šäº†å‘½åç©ºé—´çš„ä¿¡æ¯ç”±äºä¸€èˆ¬éƒ½æ˜¯é€šè¿‡å…ƒç´ è®¿é—®ç‰¹æ€§ï¼Œæ‰€ä»¥è¿™äº›æ–¹æ³•å¾ˆå°‘ä½¿ç”¨.
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd" [<!ELEMENT name (#PCDATA)>] >
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlusÂ®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <body>
+  <script type="text/javascript">
+	alert(document.doctype.publicId); // -//W3C//DTD HTML 4.01//EN
+	alert(document.doctype.systemId); // http://www.w3.org/TR/html4/srict.dtd
+	alert(document.doctype.internalSubset)
+
+  </script>
+ </body>
+</html>
+
+// DocumentType ç±»å‹çš„å˜åŒ–
+
+
+
+
+
+
+
+
+
+
+
+
