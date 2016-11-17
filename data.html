@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd" [<!ELEMENT name (#PCDATA)>] >
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html lang="en">
  <head>
   <meta charset="UTF-8">
@@ -7,12 +7,55 @@
   <meta name="Keywords" content="">
   <meta name="Description" content="">
   <title>Document</title>
+  <style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	body{
+		position: relative;
+		overflow:
+	}
+  </style>
  </head>
- <body>
+ <body name="obj">
   <script type="text/javascript">
-	alert(document.doctype.publicId); // -//W3C//DTD HTML 4.01//EN
-	alert(document.doctype.systemId); // http://www.w3.org/TR/html4/srict.dtd
-	alert(document.doctype.internalSubset)
+		var o = (function(){			
+			/*
+			 *
+			 * Game start
+			 *
+			 */
+			var Game = function(){};
+
+			/*
+			 *
+			 * Game init
+			 *
+			 */
+			 Game.prototype.init = function(){
+				var bodyWidth = document.body.clientWidth ? document.body.clientWidth : document.body.innerWidth;
+				var Hh = document.getElementsByTagName("html")[0];
+				var bodyHeight = Hh.clientHeight ? Hh.clientHeight : Hh.innerHeight;
+				var divBlockCount = bodyWidth/50;
+				var divBlockCountH = bodyHeight/50;
+				for(var i = 0;i < 2500; i++){
+					var divBg = document.createElement("div");
+					divBg.style.cssText = "background-color: #ccc;border: 1px solid #fff;width: " + (divBlockCount - 2) + "px;height: " + (divBlockCountH - 2) + "px;float: left";
+					document.body.appendChild(divBg);
+				}
+			 };
+			 return {
+				Game: Game
+			 }
+		})();
+
+		var s = new o.Game();
+
+		s.init();
+
+
+
 
   </script>
  </body>

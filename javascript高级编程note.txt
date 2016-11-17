@@ -510,6 +510,64 @@ console.log("DOM2级 的XML" + supportsDOM2XML);
 </html>
 
 // DocumentType 类型的变化
+	var newNode = document.importNode(oldNode, true);// 导入节点及其所有子节点
+	document.body.appendChild(newNode);
+
+
+	var parentWindow = document.defaultView || document.parentWindow;// 查看当前窗口的归属
+
+	// 创建一个文档类型节点 接收三个参数，文档类型，文档publicID, 文档systemId
+	var doctype = document.implemenation.createDocumentType("html", "-//W3C/DTD HTML 4.01//EN", "http://www.w3.org/html4/strict.dtd");
+
+
+	// 此方法接收三个参数 命名空间 元素 文档类型
+	var doc = document.implemenation.createDocument(spaceName, element, docType)
+
+	// 此方法接收三个参数同上 
+	var doc = document.implemenation.createDocument("http://www.w3.org/1999/xhtml", "html", dctype)
+
+	// 此方法只妆容safsri跟opera
+	var htmldoc = document.implemenation.creaetHTMLDocument(documentTiele);
+
+	// 判断当前DOM节点的DOM等级
+	document.body.isSupported("HTML", "2.0");
+
+	var element1 = divObj.elem;
+	var elemnt2 = divObj.elem;
+	element.isSameNode(elementSame); // returm true
+	element.isEqualNode(elementSame); // return true;
+
+	// DOM3级才支持，测时主流浏览器等级为DOM2
+	document.body.getUserData("name");
+	// n1 设置 的键，n2实际的数据,n3处理函数
+	document.body.setUserData("name", "Nicholas", function(){})
+	
+	var div = document.createElement("div");
+	// fn arguments 1 复制2表示导入3表示删除4表示重命名3源节点
+	div.setUserData("name", "Nicholas", function(operation,key,value,src,dest){
+		if(operation === 1){
+			dest.setUserData(key, value, function(){});
+		}
+	})
+
+	var newDiv = div.cloneNode(true);
+	alert(newDiv.getUserData("name"));
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
