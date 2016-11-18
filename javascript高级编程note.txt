@@ -554,17 +554,30 @@ console.log("DOM2级 的XML" + supportsDOM2XML);
 	alert(newDiv.getUserData("name"));
 	
 
+	// 取得对iframe的引用
+	var iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+	var doBody = iframeDoc.body || iframeDoc.frames.document.body;
+
+	// 判断CSS的支持
+	var supportDOM2CSS = document.implementation.hasFature("CSS", "2.0");
+	var supportDOM2CSS2 = document.implementation.hasFeature("CSS2" , "2.0");
+
+	cssText // 如前所述，能过它能够访问到style特性中的CSS代码
+	length // 应用给元素的CSS属性的数量。
+	parentRule // 表示CSS信息的CSSRule对象。本节后面将讨论CSSRule类型
+	getPropertyCSSValue(propertyName) // 返回包含给定属性值的CSSValue对象
+	getPropertyProority(propertyName) // 如果给定的属值使用了!important设置，则返回important; 否则返回空字符串
+	getPropertyValue(propertyName) // 返回给定属性的字符串值
+	item(index) // 返回给定位置的CSS属性名称
+	removeProperty(propertyName) // 从样式中删除给定的属性
+	setProperty(propertyName, value,priority); // 将给定的属性设置为相信的值，并加上优先权标志（"important"或者一个空字符串）
 
 
-
-
-
-
-
-
-
-
-
+	var prop, value, i, len;
+	for(i = 0,len = myDiv.style.length; i < len; i++){
+		prop = myDiv.style[i]; // 或者myDiv.style.item(i);
+		value = myDiv.style.getPropertyValue(prop);
+	}
 
 
 

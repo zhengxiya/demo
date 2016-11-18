@@ -7,11 +7,19 @@
   <meta name="Keywords" content="">
   <meta name="Description" content="">
   <title>Document</title>
+  <style type="text/css">
+	body{
+		height: 100%;
+		width: 100%;
+	}
+  </style>
  </head>
- <body>
-  <iframe src="iframeOne.html" frameborder="0" height="500px;width:500px"></iframe>
+ <body style="background-color: red;color:blue;">
+  <iframe name="ifna" src="iframeOne.html" frameborder="0" height="500px;width:500px"></iframe>
   <script type="text/javascript">
-	alert(document.frames.contentDocument)
+
+	alert(document.body.style.length);
+
   </script>
  </body>
 </html>
