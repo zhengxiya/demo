@@ -1,0 +1,140 @@
+<!doctype html>
+	<html lang="en">
+		<head>
+			<meta charset="UTF-8">
+			<meta name="Generator" content="EditPlus®">
+			<meta name="Author" content="">
+			<meta name="Keywords" content="">
+			<meta name="Description" content="">
+			<title>Document</title>
+			<link rel="stylesheet" href="style.css" />
+		</head>
+		<body>
+			<script type="text/javascript">
+				//var sheet = null;
+				for(var i = 0, len = document.styleSheets.length; i < len; i ++){
+					sheet = document.styleSheets[i];
+					//alert(sheet.href); // URL
+					//alert(sheet.disabled) // false raedy write
+					//alert(sheet.media) // all
+					//alert(sheet.ownerNode) // Object HTMLLinkElement;
+					//alert(sheet.parentStyleSheet) // null
+					//alert(sheet.title); // ""
+					//alert(sheet.type) // text/css
+					//alert(sheet.cssRules[0]); // error
+					//alert(sheet.ownerRule); // null
+					//alert(sheet.deleteRule(0));// undefined
+					//alert(sheet.insertRule("body{background-color: blue}", "2"));// index	
+					// alert(sheet.cssText); // 返回CSS中的文本 此方法兼容性差
+					// alert(sheet.parentRule); // 返回null
+					// alert(sheet.selectorText); // undefined
+					// alert(sheet.style); // undefined
+					alert(sheet.type);
+				};
+				
+				// 1
+				/*function getStyleSheet(element){
+					return element.sheet || element.styleSheet;
+				};
+
+				// 2
+				function getStyleSheet(element){
+					return element.sheet || element.styleSheet;
+				}
+
+				// 3
+				function getStyleSheet(element){
+					return element.sheet || element.styleSheet;
+				};
+
+				// 4
+				function getStyleSheet(element){
+					return element.sheet || element.styleSheet;
+				};
+
+				// 5
+				function getStyleSheet(element){
+					return element.sheet || element.styleSheet;
+				}
+
+				// 6
+				function getStyleSheet(element){
+					return element.sheet || element.styleSheet;
+				};
+
+				// 7
+				function getStyleSheet(element){
+					return element.sheet || element.styleSheet;
+				};
+
+				// 8
+				function getStyleSheet(element){
+					return element.sheet || element.styleSheet;
+				};
+
+				// 9
+				function getStyleSheet(element){
+					return element.sheet || element.styleSheet;
+				};
+
+				// 10
+				function getStyleSheet(element){
+					return element.sheet || element.styleSheet;
+				};
+
+
+				// 取得一样<link/>元素引入的样式表 
+				var link = document.getElementsByTagName("link")[0];
+				
+				var sheet = getStyleSheet(link);
+
+				// 2
+				// 取得一个<link/>元素引入的样式表
+				var link = document.getElementsByTagName("link")[0];
+
+				var sheet = getStyleSheet(link);
+
+				// 3
+				var link = document.getElementsByTagName("link")[0];
+
+				var sheet = getStyleSheet(link);
+
+				// 4
+				var link = document.getElementsByTagName("link")[0];
+
+				var sheet = getStyleSheet(link);
+
+				// 5
+				var link  = document.getElementsByTagName("link")[0];
+
+				var sheet = getStyleSheet(link);
+
+				// 6
+				var link = document.getElementsByTagName("link")[0]；
+
+				var sheet = getStyleSheet(link);
+
+				// 7
+				var link = document.getElementsByTagName("link")[0];
+
+				var sheet - getStyleSheet(link);
+
+				// 8
+				var link = document.getElementsByTagname("link")[0];
+
+				var sheet = getStyleShee(link);
+
+				// 9
+				var link = document.getElementsByTagName("link")[0];
+
+				var sheet = getStyleSheet(link);
+
+				// 10
+				var link = document.getElementsByTagName("link")[0];
+
+				var sheet = getStyleSheet(link);*/
+
+				
+			</script>
+		</body>
+	</html>

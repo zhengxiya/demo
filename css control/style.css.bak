@@ -1,0 +1,9 @@
+body{
+	background-color: red;
+}
+html{
+	background-color: yellow;
+}
+body{
+	background-color: green;
+}

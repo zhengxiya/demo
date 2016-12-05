@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <link rel="stylesheet" href="demo.css"  media="only all and (max-width: 1000px)"/>
+ </head>
+ <body>
+  <script type="text/javascript">
+	//  返回是否起用样式的布尔值 可更改
+	// alert(document.styleSheets[0].disabled);
+	// 返回样式的支持等级
+	// document.implementation.hasFeature("StyleSheet", "2.0");
+	// 返回样式的路径
+	//alert(document.styleSheets[0].href);
+	// 返回media 中的list属性
+	// alert(document.styleSheets[0].media[0]);
+	// 
+	alert(document.styleSheets[0].ownerNode);
+  </script>
+ </body>
+</html>

@@ -581,15 +581,66 @@ console.log("DOM2级 的XML" + supportsDOM2XML);
 
 
 
+	//  经测试些方法兼容性及差
+	var prop, value, i, len;
+	for(i = 0, len = myDiv.style.length; i < len; i ++){
+		prop = myDiv.style[i]; // 或者myDiv.style.item(i);
+		value = myDiv.style.getPropertyCSSValue(prop);
+		alert(prop + ":" + value.cssText + "(" + value.cssValueType + ")");
+	}
+
+	// 移除style样式
+	removeProperty(styleAttr);
+
+	// 获取样式
+	document.defaultView.getComputedStyle(myDiv, null);
+
+	// 可判断CSS 版本
+	var supportsDOM2StyleSheets = document.implementation.hasFeature("StyleSheets", "2.0");
+file css controll	
+	// document.styleSheets.length 能返回links的集合
+	// document.styleSheet 有以下属性
+	disabled 表示是否禁用此样式资源
+	href 样式表的URI
+	media 当前样式表支持的所有媒体类型 信合。
+	ownerNode: 指向拥有当前样式表的节点指针，样式表可能是在HTML中通过<link>或<style/>引入的在XML中可能是通过处理指令引入的（）。如果
+	当前样式表是其他样式表通过@import在当前样式表是通过导入的，则这个属性为null, IE不支持这个属性
+	parentStyleSheet: 在当前样式表是通过@import导入的情况下，这个属性是一个指向导入它的样式表指针
+	title : owerNode中的title属性的值。
+	type： 表示样式表类型的字符串。对CSS样式表而言。这个字符串"style/css";
+	除了disabled属性之外其他属性都是只读的。在支持以上所有属性的基础上 CSSStyleSheet类型还支持以下列属性和方法；
+	cssRules: 样式表中包含的样式规则的集合，IE不支持这个属性。但有一个类似的rules属性3
+	ownerRule： 如果样式表是通过@import导入的，这个属笥就是一个指针，指向表示导入的规则；否则，值为null。IE不支持这个属性。
+	deleteRule(index): 删除cssRules集合中指定的规则，IE不支持这个方法，但支持一个类似的removeRule()方法;
+	insertRule(rule, index); 向cssRules 集合中指定的位置插入rule字符串。IE不支持这个方法，但支持一个类似的addRule()方法
+
+file css controll
+	CSS规则
+	document.getElementsByTagName("link")[0].sheet ||document.getElementsByTagName("link")[0].styleSheet
+	此对象有以下几个属性 
+	cssText： 返回整条规则对应的文本。由于浏览器对样式表的内部处理方式不同，返回文本可能会与样式表中实际的文本不一样；Safari始终都会将文本转换成全部小写。IE不支持这个属性
+	parentRule 如果当前规则是导入的规则，这个属性引用的就是导入的规则；否则，这个值为null。IE不支持这个属性。
+	parentStyleSheet 当前规则所属的样式表。IE不支持这个属性。
+	selectorText 返回当前规则的选择符文本。由于浏览器对样式表的内啊处理方式不同，返回的文本可能会与样式表中实际的文本不一样（例如梦，Safari3之前的版本始终会将文本转换成全部小写）。在Firefox,Safari,Chrome和IE中这个属性是只读的。Opera允b许修改selectorText
+	style 一个CSSStyleDeclaration对象，可以通过它设置和取得规则中特定的样式值。
+	type表示规则类型的常量值。对于样式规则，这个值是1。IE不支持这个属性。
 
 
-
-
-
-
-
-
-
+file offsetTop offsetleft api
+	offsetHeight : 元素在垂直方向上占用的空间大小以像素计。抱括元素的高充，（可见的），水平滚动条r高度，上边框高茺和下边框高茺。
+	offsetWidth : 元素在水平方向上占用空间的大小，以像不计。包括元素的宽度，(可见的)垂直滚动条的宽度，左边框宽度和右边框宽度
+	offsetLeft ： 元素左外边框到包含元素的左内边框之彰的像素距离。
+	offsetTop : 元素的上外边框至包含元素的上内边框之间的像素距离。
+	其中，offsetLeft和offsetTop属性与包含元素有关，包含元素的引用保存在offsetParent属性中。offsetParent属性不一定与parentNode的值相等 。例如，<td>元素的offsetParent是作为其祖先元素的<table>元素，因为<table>是在DOM层次中距<td>最近的一个具有大小元素。
+	// offsetTop or offsetLeft 每一次都会重新获取，所以尽可能的少使用这两个值
+	
+file clientWidth clintHeight scrollHeight scrollWidth scrollTop scrollLeft
+	clientWidth 内容区域的宽度包含padding
+	clientHeight 内容区域的高茺包含padding
+	scrollHeight : 在没 有滚动条的情况下，元素的总高度。
+	scrollWidth : 在没有滚动条的情况下，元素内容的总宽度
+	scrollLeft : 被隐藏在内容区域左侧 的像素数，能过这个属性可以改变元素的滚动位置。
+	scrollTop : 被隐藏在内容区域上方的像素数，通过设置定个属性可以改变元素的滚动位置
 
 
 

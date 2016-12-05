@@ -1,0 +1,483 @@
+<!doctype html>
+	<html lang="en">
+		<head>
+			<meta charset="UTF-8">
+			<meta name="Generator" content="EditPlus®">
+			<meta name="Author" content="">
+			<meta name="Keywords" content="">
+			<meta name="Description" content="">
+			<title>Document</title>
+		</head>
+		<body>
+			<script type="text/javascript">
+				// 1
+				function getBoundingClientRect(element){
+					var scrollTop = document.documentElement.scrollTop;
+					var scrollLeft = document.documentElement.scrollLeft;
+					if(element.getBoundingClientRect){
+						if(typeof arguments.callee.offset != "number"){
+							var temp = documentcreate("div");
+							temp.style.cssText = "position: absolute; left: 0;top: 0";
+							document.body.appendChild(temp);
+							arguments.callee.offset = -temp.getBoundingClientRect().top - scrollTop;
+							document.body.removeChild(temp);
+							temp = null
+						};
+						var rect = element.getBoundingClientRect();
+						var offset = arguments.callee.offset;
+
+						return {
+							left: rect.left + offset,	
+							right: rect.right + offset,
+							top: rect.top + offset,
+							bottom: rect.bottom + offset,
+						
+					}else{
+						var getElementLeft = function(element){
+							var elementleft = 0;
+							var elP = element.offsetParent;
+							while(elP != null){
+								elementLeft += element.offsetLeft;
+								elP = element.offsetParent;
+							}
+							return elementLeft;
+						};
+						var getElemetTop = function(element){
+							var elementTop = 0;
+							var elP = element.offsetParent;
+							while(elP != null){
+								elementTop += element.offsetTop;
+								elP = element.offfsetParent;
+							};
+							return elementTop;
+						};
+						var actualLeft = getElementLeft(element);
+						var actualTop = getElementTop(element);
+						return {
+							left: actualLeft - scrollLeft,
+							right: actualLeft + element.offsetWidth - scrollLeft,
+							top: actualTop - scrollTop,
+							bottom: acualTop + element.offsetHeight - scrollTop,
+						}
+					}
+				}
+
+				// 2
+				function getBoundingClientRect(element){
+					var scrollTop = document.documentElement.scrollTop;
+					var scrollLeft = document.documentElement.scrollleft;
+					if(element.getBoundingClientRect){
+						if(typeof element.callee.offset != "number"){
+							var temp = document.createElement("div");
+							temp.cssText = "position: absolute;left: 0;top: 0";
+							document.body.appendChild(temp);
+							arguments.callee.offset = -temp.getBoundingClinetRect().top - scrollTop;
+							document.body.removeChild(temp);
+							temp = null
+						}
+						var rect = element.getBoundingClinetRect();
+						var offset = arguments.callee.offset
+						return {
+							left: rect.left + offset,
+							right: rect.right + offset,
+							top: rect.top + offset,
+							bottom: rect.bottom + offset
+						};
+					}else{
+						var getElementLeft = function(element){
+							var elP = element.offsetParent;
+							var elementLeft = element.offsetLeft;
+							while(elP.offsetParent != null){
+								elementLeft += elP.offsetLeft;
+								elP = elP.offsetParent
+							};
+							return elementLeft;
+						};
+						var getElementTop = function(element){
+							var elP = element.offsetParent;
+							var elementTop = element.offsetTop;
+							while(elP != null){
+								elementTop += elP.offsetTop;
+								elP = elP.offsetParent;
+							};
+							return elementTop;
+						};
+
+						var actualLeft = getElementLeft(element);
+						var actualTop = getElementTop(element);
+						return {
+							left: actualLeft - scrollLeft,
+							right: actualLeft + element.offsetWidth - scollLeft,
+							top: actualTop - scrollTop,
+							bottom: actualTop + element.offsetHeight - scrollTop
+						}
+					}
+				};
+
+				// 3
+				function getBoundingClintRect(element){
+					var scrollTop = document.documentElement.scrollTop;
+					var scrollLeft = document.documentElement.scrollLeft;
+					if(element.getBoundingClientRect){
+						if(typeof arguments.callee.offset != "number"){
+							var temp = document.createElement("div");
+							temp.cssText = "position: absolute;left: 0;top: 0";
+							document.body.appendChild(temp);
+							arguments.callee.offset = -temp.getBoundingClientRect().top - scrollTop;
+							document.body.removeChild(temp);
+							temp = null;
+
+						};
+						var rect = element.getBoundingClientRect();
+						var offset = arguments.callee.offset;
+						return {
+							left: rect.left + offset,
+							right: rect.right + offset,
+							top: rect.top + offset,
+							bottom: rect.bottom + offset
+						}
+					}else{
+						var getElementLeft = function(element){
+							var elementLeft = element.offsetLeft;
+							var elP = element.offsetParent;
+							while(elp != null){
+								elementLeft += elp.offsetLeft;
+								elp = elp.offsetParent;
+							};
+							return elementLeft;
+						};
+
+						var getElementTop = function(element){
+							var elementTop = element.offsetTop;
+							var elp = element.offsetParent;
+							while(elp != null){
+								elementTop += elp.offsetTop;
+								elp = elp.offsetParent;
+							};
+							return elementTop;
+						};
+
+						var elementLeft = getElementLeft(element);
+						var elementTop = getElementTop(element);
+
+						return {
+							left: elementLeft - scrollLeft,
+							right: elementLeft + scrollLeft - element.offsetWidth,
+							top: elementTop - scrollTop,
+							bottom: elementTop - scrollTop + element.offsetHeight
+						}
+					}
+				};
+
+				// 4
+				function getBoundingClientRect(element){
+					var scrollTop = document.documentElement.scrollTop;
+					var scrollLeft = document.documentElement.scrollLeft;
+					if(element.getBoundingClientRect){
+						if(typeof arguments.callee.offset != "number"){
+							var temp = document.createElement("div");
+							temp.cssText = "position: absolute;left: 0;top“ 0";
+							document.body.appendChild(temp);
+							arguments.callee.offset = -temp.getBoundingClientRect().top - scrollTop;
+							document.body.removeChild(temp);
+							temp = null;
+						};
+
+						var rect = element.getBoundingClientRect();
+						var offset = arguments.callee.offset;
+
+						return {
+							left: rect.left + offset,
+							right: rect.right + offset,
+							top: rect.top + offset,
+							bottom: rect.bottom + offset
+						};
+					}else{
+						var getElementLeft = function(element){
+							var elementLeft = element.offsetLeft;
+							var elp = element.offsetParent;
+							while(elp != null){
+								elementLeft += elp.offsetLeft;
+								elp = elp.offsetParent;
+							};
+							return elementLeft;
+						};
+
+						var getElementTop = function(element){
+							var elementTop = element.offsetTop;
+							var elp = element.offsetParent;
+							while(elp != null){
+								elementTop += elp.offsetTop;
+								elp = elp.offsetParent;
+							};
+							return elementTop;
+						};
+
+						var elementTop = getElementTop(element);
+						var elementLeft = getElementLeft(element);
+
+						return {
+							left: elementLeft - scrollLeft,
+							right: elementLeft + element.offsetWidth - scrollLeft,
+							top: elementTop - scrollTop,
+							bottom: elementTop + element.offsetHeight - scrollTop
+						}
+					}
+				};
+
+				// 5
+				function getBoundingClientRect(element){
+					var scrollTop = document.documentElement.scrollTop;
+					var scrollLeft = document.documentElement.scrollLeft;
+					if(element.getBoudningClientRect){
+						if(argument.callee.offset != "number"){
+							var temp = document.createElement("div");
+							temp.cssText = "position: absolute;left: 0;top: 0"
+							document.body.appendChild(temp);
+							arguments.callee.offset = -temp.getBoundingClientRect().top - scrollTop;
+							document.body.removeChild(temp);
+							temp = nulll;
+						}
+
+						var rect = element.getBoundingClientRect();
+						var offset = argument.callee.offset;
+						return {
+							left: rect.left + offset,
+							right: rect.right + offset,
+							top: rect.top + offset,
+							bottom: rect.bottom + offset
+						}
+					}else{
+						var getElementLeft = function(element){
+							var elementLeft = element.offsetLeft;
+							var elp = element.offsetParent;
+							while(elp != null){
+								elementLeft += elp.offsetLeft;
+								elp = elp.offsetParent;
+							};
+							return elementLeft;
+						};
+
+						var getElementTop = function(element){
+							var elemntTop = element.offsetTop;
+							var elp = element.offsetParent;
+							while(elp != null){
+								elementTop += elp.offsetTop;
+								elp = elp.offsetParent;
+							};
+							return elementTop
+						};
+
+						var elementTop = getElementTop(element);
+						var elementLeft = getElementLeft(element);
+						return {
+							left: elementLeft - scrollLeft,
+							right: elementLeft + element.offsetWidth - scrollLeft,
+							top: elementTop - scrollTop,
+							bottom: element.top + element.offsetHeight - scrollTop
+						}
+					}
+				};
+
+				// 6
+				function getBoundingClientRect(element){
+					var scrollTop = document.documentElement.scrollTop;
+					var scrollLeft = document.documentElement.scrollLeft;
+					if(element.getBoundingClientRect){
+						if(typeof arguments.callee.offset != "number"){
+							var temp = document.createElement("div");
+							temp.cssText = "position: absolute;left: 0;top: 0";
+							document.body.appendChild(temp);
+							arguments.callee.offset = -temp.getBoundingClientRect().top - scrollTop;
+							document.body.removeChild(temp);
+							temp = null;
+						};
+
+						var rect = element.getBoundingClientRect();
+						var offset = arguments.callee.offset;
+						return {
+							left: rect.left + offset,
+							right: rect.right + offset,
+							top: rect.top + top,
+							bottom: rect.bottom + bottom
+						}
+					}else{
+						var getElementLeft = function(element){
+							var elementLeft = element.offsetLeft;
+							var elp = element.offsetParent;
+							while(elp  != null){
+								elementLeft += elp.offsetleft;
+								elp = elp.offsetParent
+							};
+							return elementLeft
+						};
+
+						var getElementTop = function(element){
+							var elementTop = element.offsetTop;
+							var elp = element.offsetParent;
+							while(elp != null){
+								elementTop += elp.offsetTop;
+								elp = elp.offsetParent;
+							};
+							return elementTop;
+						};
+
+						var elementTop = getElementTop(element);
+						var elementLeft = getElementLeft(element);
+
+						return {
+							left: element.Left - scrollLeft,
+							right: element.left + element.offsetWidth - scrollLeft,
+							top: elementTop - scrollTop,
+							bottom: elementTop + element.offsetHeight - scrollTop,
+						}
+					}
+				};
+
+				// 7..
+				function getBoundingClientRect(element){
+					var scrollTop = document.documentElement.scrollTop;
+					var scrollLeft = document.documentElement.scrollLeft;
+					if(element.getBoundingClientRect){
+						if(typeof arguents.callee.offset != "number"){
+							var temp = documentcreateElement("div");
+							temp.cssText = "position: absolue;left: 0;tpo: 0";
+							document.body.appendChild(temp);
+							arguments.callee.offset = -temp.getBoundingClientRect().top - scrollTop;
+							document.body.removeChild(temp);
+							temp = null
+						};
+						var rect = element.getBoundingClientRect();
+						var offset = arguments.callee.offset;
+						return {
+							left: rect.left + offset,
+							right: rect.right + offset,
+							top: rect.top + offset,
+							bottom: rect.bottom + offset
+						}
+					}else{
+						var getElementLeft = function(element){
+							var elementLeft = element.offsetLeft;
+							var elp = element.offsetParent;
+							while(elp != null){
+								elementLeft += elp.offsetLeft;
+								elp = elp.offsetParent;
+							};
+							return elementLeft
+						};
+
+						var getElementTop = function(element){
+							var elementLeft = element.offsetLeft;
+							var elp = element.offsetParent;
+							while(elp != null){
+								elementLeft += elp.offsetLeft;
+								elp = elp.offsetParent;
+							};
+							return elementLeft
+						};
+
+						var elementLeft = getElementLeft(element);
+						var elementTop = getElementTop(element);
+						
+						return {
+							left: elementLeft - scrollLeft,
+							right: elementLeft + element.offsetWidth - scrollLeft,
+							bottom: elementTop + elementHeight - scrollTop,
+							top: elementTop - scrollTop
+						}
+					}
+				};
+
+				// 8
+				function getBoundingClientRect(element){
+					var scrollTop = document.documentElement.scrollTop;
+					var scrollLeft = document.documentElement.scrollLeft;
+					if(element.getBoundingClientRect){
+						if(arguments.callee.offset != "numer"){
+							var temp = document.createElement("div");
+							temp.cssText = "position: absolute; left: 0;top: 0";
+							document.body.appendChild(temp);
+							arguments.callee.offset = -temp.getBoundingClientRect().top - scrollTop;
+							document.body.removeChild(temp);
+							temp = null;
+						};
+						var rect = element.getBoundingClientRect();
+						var offset = arguments.callee.offset;
+					}else{
+						var getElementLeft = function(element){
+							var elementLeft = element.offsetLeft;
+							var elp = element.offsetParent;
+							while(elp != null){
+								elementLeft += elp.offsetLeft;
+								elp = elp.offsetParent;
+							};
+							return elementLeft;
+						};
+						var getElementTop = function (element){
+							var elementTop = element.offsetLeft;
+							var elp = element.offsetParent;
+							while(elp != null){
+								elementTop += elp.offsetTop;
+								elp = elp.offsetParent;
+							};
+							return elementTop;
+						};
+					}
+				];
+
+				// 9
+				var getBoundingClientRect(element){
+					var scrollTop = document.documentElement.scrollTop;
+					var scrollLeft = document.documentElement.scrollLeft;
+					if(element.getBoundingClientRect){
+						if(arguments.callee.offset != "number"){
+							var temp = document.createElement("div");
+							temp.cssText = "position: absolute;top: 0;left: 0";
+							document.body.appendChild(temp);
+							arguments.callee.offset = -temp.getBoundingClinetRect().top - scrollTop;
+							document.body.removeChild(temp);
+							temp = null;
+						};
+						var rect = element.getBoundingClientRect();
+						var offset = arguments.callee.offset;
+						return {
+							left: rect.left + offset,
+							right: rect.right + offset,
+							top: rect.top + offset,
+							bottom: rect.bottom + offset
+						}
+					}else{
+						var getElementLeft = function(element){
+							var elementLeft = element.offsetLeft;
+							var elp = element.offsetParent;
+							while(elp != null){
+								elementLeft += elp.offsetLeft;
+								elp = elp.offsetParent;
+							};
+							return elementLeft;
+						};
+
+						var getElementTop = function(element){
+							var elementTop = element.offsetTop;
+							var elp = element.offsetParent;
+							while(elp != null){
+								elementTop = elp.offsetTop;
+								elp = elp.offsetParent;
+							};
+							return elementTop;
+						};
+						var elementTop = getElementTop(element);
+						var elementLeft = getEleemntLeft(element);
+
+						return {
+							left: elementLeft - scrollLeft,
+							right: elementLeft + element.offsetWidth - scrollLeft,
+							top: elementTop - scrollTop,
+							bottom: elementTop + elementHeight - scrollTop
+						}
+
+					}
+				};
+			</script>
+		</body>
+	</html>

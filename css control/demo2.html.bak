@@ -1,0 +1,46 @@
+<!doctype html>
+	<html lang="en">
+		<head>
+			<meta charset="UTF-8">
+			<meta name="Generator" content="EditPlus®">
+			<meta name="Author" content="">
+			<meta name="Keywords" content="">
+			<meta name="Description" content="">
+			<title>Document</title>
+			<link rel="stylesheet" href="style.css" />
+		</head>
+		<body>
+			<div class="box"></div>
+			<script type="text/javascript">
+				var sheet = document.styleSheets[0];
+				var rules = sheet.cssRules || sheet.rules;
+				//var rule = rules[3];
+				//alert(rule.selectorText); // body
+				//alert(rule.style.cssText);// background-color: red;
+				//alert(rule.style.backgroundColor); // red;
+				//alert(rule.style.width);//100px
+				//alert(rule.style.height);//200px
+				//var sheet = document.styleSheets[0]; // object
+				//var rules = sheet.cssRules || sheet. rules; // rule
+				//var rule = rules[3];
+				//rule.style.backgroundColor = "red";
+				//alert(rule)
+				// 添加样式信息的方法
+				function insertRule(obj){
+					var sheet = obj.sheet;
+					var selectorText = obj.selectorText;
+					var cssText = obj.cssText;
+					var position = obj.position;
+					if(sheet.inertRule){
+						sheet.insertRule(selectorText + "(" + cssText + ")", position);
+					}else if(sheet.addRule){
+						sheet.addRule(selectorText, cssText, position);
+					}else{
+						return new Error("对象不支持此方法");
+					}
+				};
+
+				insertRule({sheet: sheet, selectorText: "body", cssText: "background-color: #000 !important", position: "0" })
+			</script>
+		</body>
+	</html>

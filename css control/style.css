@@ -1,0 +1,14 @@
+body{
+	background-color: red;
+}
+html{
+	background-color: yellow;
+}
+body{
+	background-color: green;
+}
+div.box{
+	background-color: blue;
+	width: 100px;
+	height: 200px;
+}

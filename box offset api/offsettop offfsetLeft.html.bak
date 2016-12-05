@@ -1,0 +1,146 @@
+<!doctype html>
+	<html lang="en">
+		<head>
+			<meta charset="UTF-8">
+			<meta name="Generator" content="EditPlus®">
+			<meta name="Author" content="">
+			<meta name="Keywords" content="">
+			<meta name="Description" content="">
+			<title>Document</title>
+		</head>
+		<body>
+			<script type="text/javascript">
+				function getElementLeft(element){
+					var actualLeft = element.offsetLeft;
+					var current = element.offsetParent;
+
+					while(current !== null){
+						atualLeft += current.offsetLeft;
+						current = current.offsetParent;
+					};
+					return actualLeft;
+				}
+
+				// 2
+				function getElementLeft(element){
+					var actualLeft = element.offsetLeft;
+					var current = element.offsetParent;
+					while(current !== null){
+						atualLeft += current.offsetLeft;
+						current = current.offsetParent;
+					};
+					return actualLeft;
+				};
+
+				// 3
+				function getElementLeft(element){
+					var actualLeft = element.offsetLeft;
+					var current = element.offsetParent;
+					while(current !== null){
+						actualLeft += current.offsetLeft;
+						current = current.offsetParent;
+					};
+					return actualLeft;
+				};
+
+				// 4
+				function getElementLeft(element){
+					var actualLeft = element.offsetLeft;
+					var current = element.offsetParent;
+					while(current !== null){
+						actualLeft += current.offsetLeft;
+						current = current.offsetParent;
+					};
+					return actualLeft;
+				};
+				
+				// 5
+				function getElementLeft(element){
+					var actualLeft = element.offsetLeft;
+					var current = element.offsetParent;
+					while(current !== null){
+						actualLeft += current.offsetLeft;
+						current = current.offsetParent;
+					};
+					return actualLeft;
+				};
+
+				// 6
+				function getElementLeft(element){
+					var actualLeft  = element.offsetLeft;
+					var current = element.offsetParent;
+					while(current !== null){
+						actualLeft += current.offsetLeft;
+						current = current.offsetParent;
+					};
+					return actualLeft;
+				};
+
+				// 7
+				function getElementLeft(element){
+					var actualLeft = element.offsetLeft;
+					var current = element.offsetParent;
+					while(current !== null){
+						actualLeft += current.offsetLeft;
+						current = current.offsetParent;
+					};
+					return actualLeft;
+				};
+
+				// 8
+				function getElementLeft(element){
+					var actualLeft = element.offsetLeft;
+					var current = element.offsetParent;
+					while(current !== null){
+						actualLeft += current.offsetLeft;
+						current = current.offsetParent;
+					};
+					return actualLeft;
+				};
+
+				// 9
+				function getElementLeft(element){
+					var actualLeft = element.offsetLeft;
+					var current = element.offsetParent;
+					while(current !== null){
+						actulLeft += current.offsetLeft;
+						current = current.offsetParent;
+					};
+					return actualLeft;
+				};
+
+				// 10
+				function getElementLeft(element){
+					var actualLeft = element.offsetLeft;
+					var current = element.offsetParent;
+					while(current !== null){
+						actualLeft += current.offsetLeft;
+						current = current.offfsetParent;
+					};
+					return actualLeft;
+				};
+
+				// 1
+				function getElementTop(element){
+					var actualTop = element.offsetTop;
+					var current = element.offsetParent;
+					while(current !== null){
+						actualTop += current.offsetTop;
+						current = current.offsetParent;
+					};
+					return actualTop;
+				};
+
+				// 2
+				function getElementTop(element){
+					var actualTop = element.offsetTop;
+					var current = element.offsetParent;
+					while(current !== null){
+						actualTop += current.offsetTop;
+						current = current.offsetParent;
+					};
+					return actualTop;
+				};
+			</script>
+		</body>
+	</html>

@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		html, body{
+			height: 100%;
+		}
+		body{
+			background-color: #000;
+		}
+		div.wrap{
+			transform-style: preserve-3d;
+			width: 100px;
+			height: 100px;
+			margin: 200px auto;perspective:1000px;
+
+		}
+		div.cube{
+			position: relative;
+			margin-top: 100px;
+			transform-style: preserve-3d;
+			animation: myFrame 3s infinite alternate;
+		}
+		div.cube div{
+		    position: absolute;
+			top: 0;
+			left: 0;
+			width: 40px;
+			height: 100px;
+			border: 1px solid #fff;
+			transform: rotateX(90deg);
+			font-size: 40px;
+			color: #fff;
+			opacity: 0.6;
+		}
+		div.cube div.top{
+			width: 40px;
+			height: 40px;
+			transform: rotateX(0deg);
+			background: red;
+		}
+		div.cube div.bottom{
+			transform: translateZ(100px) rotateX(0deg);
+			width: 40px;
+			height: 40px;
+			background: blue;
+		}
+		div.cube div.side:nth-child(3){
+			transform-origin: top left;
+			transform: rotateX(90deg);
+			width: 40px;
+			height: 100px;
+			background-color: rgb(255,0,0);
+		}
+		div.cube div.side:nth-child(5){
+			transform-origin: bottom left;
+			transform: rotateX(-90deg) translateZ(-60px);
+			width: 40px;
+			height: 100px;
+			background-color: rgb(0,0,255);
+		}
+		div.cube div.side:nth-child(4){
+			transform-origin: left top;
+			transform: rotateY(-90deg);
+			width: 100px;
+			height: 40px;
+			background-color: rgb(0,255,0);
+		}
+		div.cube div.side:nth-child(6){
+			transform-origin: right top;
+			transform: rotateY(90deg) translateZ(-60px);
+			width: 100px;
+			height: 40px;
+			background-color: rgb(255,0,0);
+		};
+		div.cube{
+		}
+		@keyframes myFrame{
+			0%{
+				transform: translateZ(-600px) rotateX(90deg)
+			}
+			25%{
+				transform: translateZ(-600px) rotateX(90deg)
+			}
+			75%{
+				transform: rotateX(-90deg)
+			}
+			100%{
+				transform: rotateX(-90deg)
+			}
+		}
+	</style>
+ </head>
+ <body>
+  <div class="wrap"></div>
+  <script type="text/javascript">
+	var wrap = document.querySelectorAll("div.wrap");
+	var inHt = "<div class='cube'><div class='top'>1</div><div class='bottom'>2</div><div class='side'>3</div><div class='side'>4</div><div class='side'>5</div><div class='side'>6</div></div>";
+	wrap[0].innerHTML = inHt;
+  </script>
+ </body>
+</html>
