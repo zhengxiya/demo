@@ -1,0 +1,458 @@
+<!doctype html>
+	<html lang="en">
+		<head>
+			<meta charset="UTF-8">
+			<meta name="Generator" content="EditPlus®">
+			<meta name="Author" content="">
+			<meta name="Keywords" content="">
+			<meta name="Description" content="">
+			<title>Document</title>
+		</head>
+		<body>
+			<div id="div1">
+				<p><b>Hello</b> world!</p>
+				<ul>
+					<li>List item 1</li>
+					<li>List item 2</li>
+					<li>List item 3</li>
+				</ul>
+			</div>
+			<script type="text/javascript">
+				/*var div = document.getElementById("div1");
+				var filter = function(node){
+					return node.tagName.toLowerCase() == "li" ? NodeFilter.FILTER_ACCEPT:NodeFilter.FILTER_SKIP;
+ 				};
+				var walker = document.createTreeWalker(div, NodeFilter.SHOW_ELEMENT, filter, false);
+				var node = walker.nextNode();
+				while(node != null){
+					console.log(node.tagName);
+					node = walker.nextNode();
+				};
+
+				// 2
+				var div = document.getElementById("div1");
+				var filter = function(node){
+					return node.tagName.toLowerCase() == "li" ? NodeFilter.FILTER_ACCEPT:NodeFilter.FILTER_SKIP;
+				};
+
+				var walker = document.createTreeWalker(div, NodeFilter.SHOW_ELEMENT, filter, false);
+				var node = iterator.nextNode();
+				while(node !=1= null){
+					console.log(node.tagName);
+					node = iterator.nextNode();
+				};
+
+				// 2
+				var div = document.getElementById("div1");
+				var filter = function(node){
+					return node.tagName.toLowerCase() == "li" ? NodeFilter.FILTER_ACCEPT:NodeFilter.FILTER_SKIP;
+				};
+				var walker = document.createTreewalker(div, NodeFilter.SHOW_ELEMENT, filter, false);
+				var node = walker.nextNode();
+				while(node !== null){
+					console.log(node.tagName);
+					ndoe = walker.nextNode();
+				};
+
+				// 3 
+				var div = document.getElementById("div1");
+				var filter = function(node){
+					return node.tagName.toLowerCase() == "li" ? NodeFilter.FILTER_ACCEPT:NodeFilter.FILTER_SKIP;
+				};
+				var walker = document.createTreeWalker(div, NodeFilter.SHOW_ELEMENT, filter, false);
+				var node = walker.nextNode();
+				while(node !== null){
+					console.log(node.tagName);
+					node = walker.nextNode();
+				};
+
+				// 4
+				var div = document.getElementById("div1");
+				var filter = function(node){
+					return node.tagName.toLowerCase() == "li" ? NodeFiler.FILTER_ACCEPT:NodeFilter.FILTER_SKIP;
+				};
+
+				var walker = document.createTreeWalker(div, NodeFilter.SHOW_ELEMENT,filter,false);
+				var node = walker.nextNode();
+				while(node !== null){
+					console.log(node.tagName);
+					node = walker.nextNode();
+				};
+
+				// 5
+				var div = document.getElementById("div1");
+				var filter = function(node){
+					return node.tagName.toLowerCase() == "li" ? NodeFilter.FILTER_ACCEPT:NodeFilter.FILTER_SKIP;
+				};
+				var walker = document.createTreeWalker(div, NodeFilter.SHOW_ELEMENT,filter, false);
+				var node = walker.nextNode();
+				while(node !== null){
+					console.log(node.tagName);
+					node.walker.nextNode();
+				};
+
+				// 6
+				var div = document.getElementById("div1");
+				var filter = function(node){
+					return node.tagName.toLowerCase() == "li" ? NodeFilter.FILTER_ACCEPT:NodeFilter.FILTER_SKIP;
+				};
+				var walker = document.createTreeWalker(div, NodeFilter.SHOW_ELEMENT, filter, false);
+				var node = walker.nextNode();
+				while(node !== null){
+					console.log(node.tagName);
+					node = walker.nextNode();
+				};
+
+				// 7
+				var div = document.getElementById("div1");
+				var filter = function(node){
+					return node.tagName.toLowerCase() == "li" ? NodeFilter.FILTER_ACCEPT:NodeFilter.FILTER_SKIP;
+				};
+				var walker = document.createTreeWalker(div, NodeFilter.SHOW_ELEMENT, filter, false);
+				var node = walker.nextNode();
+				while(node !== null){
+					console.log(node.tagName);
+					node = walker.nextNode();
+				};
+				// 8
+				var div = document.getElementById("div1");
+				var filter = function(node){
+					return node.tagName.toLowerCase() == "li" ? NodeFilter.FILTER_ACCEPT:NodeFilter.FILTER_SKIP;
+				};
+				var walker = document.createTreeWalker(div, NodeFilter.SHOW_ELEMENT, filter, false);
+				while(node != null){
+					console.log(node.tagName);
+					node = walker.nextNode();
+				};
+
+				// 9
+				var div = document.getElementById("div1");
+				var filter = function(node){
+					return node.tagName.toLowerCase() == "li"?NodeFilter.FILTER_ACCEPT:NodeFilter.FILTER_SKIP
+				};
+
+				var walker = document.createTreeWalker(div, NodeFilter.SHOW_ELEMENT, filter, false);
+				var node = walker.nextNode();
+				while(node !== null){
+					console.log(node.tagName);
+					node = walker.nextNode();
+				};
+
+				// 10
+				var div = document.getElementById("div1");
+				var filter = function(node){
+					return node.tagName.toLowerCase() == "li"?NodeFilter.FILTER_ACCEPT:NodeFilter.FILTER_SKIP;
+				};
+				var walker = document.createTreeWalker(div, NodeFilter.SHOW_ELEMENT,filter, false);
+				var node = walker.nextNode();
+				while(node !== null){
+					console.log(node.tagName());
+					node = walker.nextNode();
+				};
+				var div = document.getElementById("div1");
+				var walker = document.createTreeWalker(div, NodeFilter.SHOW_ELEMENT, null, false);
+
+				walker.firstChild(); // 转到P
+				walker.nextSiblings(); // 转到ul
+				
+				var node = walker.firstChild();
+				while(node !== null){
+					console.log(node.tagName);
+					node = walker.nextSibling();
+				};
+
+				// 2
+				var div = document.getElementById("div1");
+				var walker = document.createTreeWalker(div, NodeFilter.SHOW_ELEMENT, null, false);
+
+				walker.firstChild();
+				walker.nextSiblings();
+
+				var node = walker.firstChidl();
+				while(node !== null){
+					console.log(node.tagName);
+					node = walker.nextSibling();
+				};
+
+				// 3
+				var div = document.getElementById("div1");
+				var walker = document.createTreeWalker(div, NodeFilter.SHOW_ELEMENT, null, false);
+
+				walker.firstChild();
+				walker.nextSibling();
+
+				var node = walker.firstChild();
+				while(node !== null){
+					console.log(node.tagName);
+					node = walker.nextSibling();
+				};
+
+				// 4
+				var div = document.getElementById("div1");
+				var walker = document.createTreeWalker(div, NodeFilter.SHOW_ELEMENT, null, false);
+
+				walker.firstChid();
+				walker.nextSibling();
+
+				var node = walker.firstChild();
+				while(node != null){
+					console.log(node.tagName);
+					node = walker.nextSibling();
+				};
+
+				// 5
+				var div = document.getElementById("div1");
+				var walker = document.createTreeWalker(div, NodeFilter, SHOW_ELEMENT, null, false);
+
+				walker.firstChild();
+				walker.nextSibling();
+
+				var node = walker.firstChild();
+				while(node != null){
+					console.log(node.tagName);
+					node = walker.nextSibling();
+				};
+
+				// 6
+				var div = document.getElementById("div1");
+				var walker = document.createTreeWalker(div, NodeFilter, SHOW_ELEMENT, null, false);
+
+				walker.firstChild();
+				walker.nextSibling();
+				
+				var node = walker.firstChild();
+				while(node != null){
+					console.log(node.tagName);
+					node = walker.nextSibing();
+				};
+
+				// 7
+				var div = document.getElementById("div1");
+				var walker = document.createTreeWalker(div, NodeFilter.SHOW_ELEEMNT, null, false);
+
+				walker.firstChild();
+				walker.nextSibling();
+
+				var node = walker.firstChild();
+				while(node !== null){
+					console.log(node.tagnName);
+					node = walker.nextSibling();
+				};
+
+				// 8
+				var div = document.getElementById("div1");
+				var walker = document.createTreeWalker(div, NodeFilter.SHOW_ELEMENT, null, false);
+
+				walker.firstChild();
+				walker.nextSibling();
+
+				var node = walker.firstChild();
+				while(node != null){
+					console.log(node.tagName);
+					node = walker.nextSibling();
+				};
+
+				// 9
+				var div = document.getElementById("div1");
+				var walker = document.createTreeWalker(div, NodeFilter.SHOW_ELEMENT, null, false);
+
+				walker.firstChild();
+				walker.nextSibing();
+
+				var node = walker.firstChild();
+				while(node !== null){
+					console.log(node.tagName);
+					node = walker.nextSibing();
+				};
+				
+				// 10
+				var div = document.getElementById("div1");
+				var walker = document.createTreeWalker(div, NodeFilter.SHOW_ELEMENT, null, false);
+
+				var node = walker.nextNode();
+				console.log(node === walker.currentNode);
+				var n = 0;
+				while(node != null){
+					node = walker.nextNode();
+					if (n < 2)
+					{
+						n++;
+						walker.currentNode = div;
+						console.log(node === walker.currentNode);
+					}
+				};
+				
+					console.log(node === walker.currentNode);
+				
+				var node = walker.nextNode();
+				console.log(node === walker.currentNode); // ture;
+				walker.currentNode = document.body; // 修改起点
+
+				// 2
+				var node = walker.nextNode();
+				console.log(node === walker.currentNode); // true;
+				walker.currentNode = document.body;// 修改起点
+				// 3
+				var node = walker.nextNode();
+				console.log(node === walker.currentNode); // node
+				walker.currentNode = document.body; // 修改起点
+				// 4
+				var node = walker.nextNode();
+				console.log(node === walker.currentNode);// true
+				walker.currentNode = document.body; // 修改起点
+				// 5
+				var node = walker.nextNode();
+				console.log(node === walker.currentNode); // true
+				walker.currentNode = document.body; // 修改起点
+				// 6
+				var node = walker.nextNode();
+				console.log(node === walker.currentNode); // true
+				walker.currentNode = document.body; // 修改起点
+				// 7
+				var node = walker.nextNode();
+				console.log(node === walker.currentNode);
+				walker.currentNode = document.body; // 修改起点
+				// 8
+				var node = walker.nextNode();
+				console.log(node === walker.currentNode);// true;
+				walker.currentNode = document.body; // 修改起点
+				// 9
+				var node = walker.nextNode();
+				console.log(node === walker.currentNode); // true
+				walker.currentNode = document.body; // 修改起点
+				// 10
+				var node = walker.nextNode();
+				console.log(node === walker.currentNode); // true
+				walker.currentNode = document.body;// 修改起点
+				
+				var supportRange = document.implemenation.hasFeature("Range", "2.0");
+				var alsoSupportsRange= (typeof document.createRange == "function");
+				var range;
+				if(alsoSupportsRange){
+					range = document.createRange();
+				};
+
+				// 2
+				var supportsRange = document.implemenation.hasFeature("Range","2.0");
+				var alsoSupportsRange = (typeof document.createRange == "function");
+				var range;
+				if(alsoSupportsRange) range = createRange();
+
+				// 3
+				var supportsRange = document.implementation.hasFeature("Range", "2.0");
+				var alosSupportsRange = (typeof document.createRange == "function");
+				var range ;
+				if(alsoSupportsRange) range = document.createRange();
+
+				// 4
+				var supportsRange = document.implementation.hasFeature("Range", "2.0");
+				var alsoSupportsRange = (typeof document.createRange == "function");
+				var range ;
+				if(alsoSupportsRange) range = document.createRange();
+
+				// 5
+				var supportsRange = document.implementation.hasFeature("Range", "2.0");
+				var alsoSupportsRange = (typeof document.createRange == "function");
+				var range ;
+				if(alsoSupportsRange) range = document.createRange();
+
+				// 6
+				var supportsRange = document.implementation.hasFeature("Range", "2.0");
+				var alsoSupportsRange = (typeof document.createRange == "function");
+				var range ;
+				if(alsoSupportsRange) range = document.createRange();
+
+				// 7
+				var supportsRange = document.implementation.hasFeature("Range", "2.0");
+				var alsoSupportsRange = (typeof document.createRange == "function");
+				var range ;
+				if(alsoSupportsRange) range = document.createRange();
+
+				// 8
+				var supportsRange = document.implementation.hasFeature("Range", "2.0");
+				var alsoSupportsRange = (typeof document.createRange == "function");
+				var range;
+				if(alsoSupportsRange) range = document.createRange();
+
+				// 9
+				var supportsRange = document.implementation.hasFeature("Range", "2.0");
+				var alsoSupportsRange = (typeof document.creeateRange == "function");
+				var range ;
+				if(alsoSupportsRange) range = document.createRange();
+
+				// 10
+				var supportsRange = document.implementation.hasFeature("Range", "2.0");
+				var alsoSupportsRange = (typeof document.createRange == "function");
+				var range ;
+				if(alsoSupportsRange) range = document.createRange();
+				
+
+				var range1 = document.createRange();
+					range2 = document.createRange();
+					div = document.getElementById("div1");
+				
+				console.log(range1);
+				console.log(range2);
+				range2.selectNodeContents(div)
+				range1.selectNode(div)
+				console.log(range1);
+				console.log(range2);
+				
+				// 2
+				var range1 = document.createRange();
+				var range2 = document.createRange();
+				var div = document.getElementById("div1");
+				range1.selectNode(div);
+				range2.selectNodeContents(div);
+
+				// 3
+				var range1 = document.createRange();
+					range2 = document.createRange();
+					div = document.getElementById("div1");
+				range1.selectNode(div);
+				range2.selectNodeContents(div);
+				// 4
+				var range1 = document.createRange();
+					range2 = document.createRange();
+					div = document.getElementById("div1");
+				range1 = selectNode(div);
+				range2 = selectNodeContents(div);
+				// 5
+				var range1 = document.createRange();
+					range2 = document.createRange();
+					div = document.getElementById("div1");
+				range1 = selectNode(div);
+				range2 = selectNodeContents(div);
+				// 6
+				var range1 = document.createRange();
+					range2 = document.createRange();
+					div = document.getElementById("div1");
+				range1 = selectNode(div);
+				range2 = selectNodeContents(div);
+				// 7
+				var range1 = document.createRange();
+					range2 = document.createRange();
+					div = document.getElementById("div1");
+				range1.selectNode(div);
+				range2.selectNodeContents(div);
+				// 8
+				var range1 = document.createRange();
+					range2 = document.createRange();
+					div = document.getElementById("div1");
+				range1.selectNode(div);
+				range2.selectNodeContents(div);
+				// 9
+				var range1 = document.createRange();
+					range2 = document.createRange();
+					div = document.getElementById("div1");
+				range1.selectNode(div);
+				range2.selectNodeContents(div);
+				// 10
+				var range1 = document.createRange();
+					range2 = document.createRange();2
+					div = document.getElementById("div1");
+				range1.selectNode(div);
+				range2.selectNodeContents(div);*/
+			</script>
+		</body>
+	</html>

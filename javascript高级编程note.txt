@@ -642,5 +642,74 @@ file clientWidth clintHeight scrollHeight scrollWidth scrollTop scrollLeft
 	scrollLeft : 被隐藏在内容区域左侧 的像素数，能过这个属性可以改变元素的滚动位置。
 	scrollTop : 被隐藏在内容区域上方的像素数，通过设置定个属性可以改变元素的滚动位置
 
+file each
+	NodeIterator 类型是两者中比较简单的一个，可双使用document.createNodeIterator()方法创建它的新实例。这个方法接受下列4个参数.
+	root: 想要作为搜fxp起眯的树中的节点。
+	whatToShow: 表示要访问哪些节点的数字代码。
+	filter: 是一个NodeFilter对象，或者一个表示应该接爱还是拒绝某特定节点的函数，
+	entityReferenceExpansion； 布尔值，表示是否要扩展实体引用。这个参数在HTML页面中没有用，因为其中的实体引用不能扩展。
+	whatToShow： 参数是一位掩码，通过应用一个或多个过滤器(filter)来确定要访问哪些节点。这个能数的值以常量形式在NodeFilter类型中定义，如下所示.
+	NodeFilter.SHOW_ALL: 显示所有类型的节点。
+	NodeFilter.SHOW_ELEMENT: 显示元素节点。
+	NodeFilter.SHOW_ATRIBUTE： 显示特性节点。由于DOM结构原因，实际上不能使用这个值。
+	NodeFilter.SHOW_TEXT: 显示文本节点。
+	NodeFilter.SHOW_CDATA_SECTION: 显示CDATA节点。对HTML页面没有用。
+	NodeFilter.SHOW_ENTITY_REFERENCE: 显示实体引用节点。对HTML页面没有用。
+	NodeFilter.SHOW_ENTITY: 显示实体节点。对HTML页面没有用。
+	NodeFilter.SHOW_PROCESSING_INSTRUCTION: 显示处理指令节点。对HTML页面没有用。
+	NodeFilter.SHOW_COMMENT: 显示注释节点。
+	NodeFilter.SHOW_DOCUMENT: 显示文档节点。
+	NodeFilter.SHOW_DOCUMENT_TYPE: 显示文档类型节点。
+	NodeFilter.SHOW_DOCUMENT_FRAGMENT:显示文档版段节点。对HTML页面没有用。
+	NodeFilter.SHOW_NOTATION: 显示符号节点。对HTML页面没有用。
+	
+	var whatToShow = NodeFilter.SHOW_ELLEMENT | NodeFilter.SHOW_TEXT;
+	NodeFilter.FILTER_ACCEPT:接受当前节点
+	NodeFilter.FILTER_SKIP:跳过当前节点
 
+	
+TreeWalker file
+	TreeWalker是NodeIterator的一个更高级的版本。除了包括nextNode()和previousNode()在内的相同的功能之外，这个类型还提供了下列用于在不同方向上遍历DOM结构的方法。
+	parentNode() : 遍历到当前节点的父节点;
+	firstChild()：遍历到当前节点的第一个节点;
+	lastChild() : 遍历到当前节点的最后一个节点;
+	nextSibling() : 遍历到当前节点的下一个同辈节点
+	previousSibling() : 遍历到当前节点的上一个同辈节点
+	拒绝过滤当前的所有同级节点与同及子节点
+	TreeWalker新增了一个过滤属性 NodeFilter.FILTER_REJECT; 
+	
+	currentNode:表示上一次遍历中返回的节点。通过设置这个属性也可以修改遍历继续进行的起点
+	
+	var range = document.createRange(): 
+	
+	startContainer: 包含范围起点的节点(即选区中第一个节点的父节点);
+	startOffset: 范围在startContainer 中起点的偏移量。如果startContainer是文本节点，注释节点或者CDATA节点,那么startOffset就是范围 起点之前跳 过的字符数量。否则startOffset就是范围 中第一个子节点的索引.
+	endContainer: 包含范围终点节点(即选区中最后一个节点的父节点)。
+	endOffset: 范围在endContainer中终点的偏移量(与startOffset尊循相同的取值则);
+	commonAncestorContainer: startContainer和endContainer共同的祖先节点在文档树中位置最深的那个.
+	此方法有两个常用函数
+	//  往range中的document替换成elmennt.parentNode
+	range.selectNode(element);
+	// 往range中的document替换成element;
+	range.selectNodeContents(element)
+	setStartBefore(refNode) 将范围的起点设置在refNode之前，因此refNode也就是范围选区中的第一个子节点。同时会将startContainer属笥设置为refNode.parentNode，将startOffset属性设置为refNode在其父节点的childNodes集合中的索引
+	setStartAfter(refNode) 将范围的起点设置在refNode之后，因此refNode也就不在范围之内了，其下一个同辈节点才是范围选区中的第一个子节点。同时会将startContainer属性充置为refNode.paretnNode,将startOffset 属性设置为refNode在其父节点的chidlNodes集合中的索引加1
+	setEndBefore(refNode) 将范围的终点设置在refNode之前，因此refNode也就不在范围之内了，其上一个同辈节点才是范围选区中的电子出版物后一个子节点。同时会将endContainer属性设置为refNode.parentNode，将endOffset属性设置为refNode在其父节点的childNodes集合中的索引.
+	setEndAfter(refNode) 将范围的终点设置在refNode之后，因此refNode也就是范围选区中的电子出版物后一个子节点。同时会将endContainer属性设置为reefNode.parentNode，将endOffset属性设置为refNode在其父节点的childNodes集合中的索引加1
+	
+				// 10
+				var range1 = document.createRange();
+				var range2 = document.createRange();
+				var p1 = document.getElementById("p1");
+				var i , len;
+				for(i = 0, len = p1.parentNode.childNodes.length; i < len; i ++){
+					if(p1.parentNode.childNodes[i] == p1){
+						p1Index = i;
+						break;
+					};
+				};
 
+				range1.setStart(p1.parentNode, p1Index);
+				range1.setEnd(p1.parentNode, p1Index + 1);
+				range2.setStart(p1, 0);
+				range2.setEnd(p1, p1.childNodes.length);

@@ -1,0 +1,74 @@
+<!doctype html>
+	<html lang="en">
+		<head>
+			<meta charset="UTF-8">
+			<meta name="Generator" content="EditPlus®">
+			<meta name="Author" content="">
+			<meta name="Keywords" content="">
+			<meta name="Description" content="">
+			<title>Document</title>
+		</head>
+		<p id="p1">这是一个p标签</p>
+		<body>
+			<script type="text/javascript">
+				var range1  = document.createRange();
+				var range2 = document.createRange();
+				var p1 = document.getElementById("p1");
+				var p1Index = -1;
+				var i,len;
+				for(i = 0,len = p1.parentNode.childNodes.length; i< len; i ++){
+					if(p1.parentNode.childNodes[i] == p1){
+						p1Index = 1;
+						break;
+					};
+				};
+
+				console.log(range1);
+				range1.setStart(p1.parentNode, p1Index);
+				console.log(range1);
+				range1.setEnd(p1.parentNode, p1Index + 1);
+				console.log(range1);
+				range2.setStart(p1, 0);
+				console.log(range2);
+				range2.setEnd(p1, p1.childNodes.length);
+				console.log(range2);
+
+				// 2
+				var range1 = document.createRange();
+				var range2 = document.createRange();
+				var p1 = document.getElementById("p1");
+				var p1Index = -1;
+				var i, len;
+				for(i = 0,len = p1.parentNode.childNodes.length; i < len; i __){
+					if(p1.parentNode.childNodes[i] == p1){
+						p1Index = i;
+						break;
+					};
+				};
+				range1.setStart(p1.parentNode, p1Index);
+				range1.setEnd(p1.parentNode, p1Index - 1);
+				range2.setStart(p1, 0);
+				range2.setEnd(p1, p1.childNodes.length);
+
+
+
+				// 3
+				var range1 = document.createRange();
+				var range2 = document.createRange();
+				var p1 = document.getElementById("p1");
+				var p1Index = -1;
+				var i, len;
+				for(i = 0,len = p1.parentNode.childNodes.length; i < len; i ++){
+					if(p1.parentNode.childNodes[i] == p1){
+						p1Index = i;
+						break;
+					};
+				};
+
+				range1.setStart(p1.parentNode, p1Index);
+				range1.setEnd(p1.parentNode, p1Index - 1);
+				range2.setStart(p1, 0);
+				range2.setEnd(p1, p1.childNodes.length);
+			</script>
+		</body>
+	</html>

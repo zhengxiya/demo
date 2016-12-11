@@ -1,0 +1,356 @@
+<!doctype html>
+	<html lang="en">
+		<head>
+			<meta charset="UTF-8">
+			<meta name="Generator" content="EditPlus®">
+			<meta name="Author" content="">
+			<meta name="Keywords" content="">
+			<meta name="Description" content="">
+			<title>Document</title>
+		</head>
+		<body>
+
+			<div id="div1">
+				<p><b>Hello</b>workd!</p>
+				<ul>
+					<li>List item 1</li>
+					<li>List item 2</li>
+					<li>List item 3</li>
+				</ul>
+			</div>
+			<script type="text/javascript">
+				/*var supportsTranversals = document.implemenation.hasFeature("Traversal", "2.0");
+				var suppourtsNodeiterator = (typeof document.createNodeIterator == "function");
+				var supportsTreeWalker = (typeof document.createTreeWalker == "function");
+
+				// 2
+				var supportsTranversals = document.implementation.hasFeature("Traversal", "2.0");
+				var supportsNodeItertor = (typeof document.createNodeIterator == "function");
+				var supportsTreeWalker = (typeof document.createTreeWalker == "function");
+
+				// 3
+				var supportsTranversals = document.implementation.hasFeature("Traversal", "2.0");
+				var supportsNodeIteraltor = (typeof document.createNodeIterator == "function");
+				var supportsNodeIteraltor = (typeof document.createTreeWalker == "function");
+
+				// 4
+				var supportsTraversal = document.implementation.hasFeature("Traversal", "2.0");
+				var supportsNodeIterator = (typeof document.createNodeIterator == "function");
+				var supportsTreeWalker = (typeof document.createTreeWalker == "function");
+
+				// 5
+				var supportsTraversals = document.implementation.hasFeature("Traversal", "2.0");
+				var supportsNodeIterator = (typeof document.createNodeIterator == "function");
+				var supportsTreeWalker = (typeof document.createTreeWalker == "function");
+
+				// 6
+				var supportsTraversals = document.implementation.hasFeature("Traversal", "2.0");
+				var supportsNodeIterator = (typeof document.createNodeIterator == "function");
+				var supportsNodeIterator = (typeof document.createNodeIterator == "function");
+				var supportsTreeWalker = (typeof document.createTreeWalker == "function");
+
+				// 7
+				var supportsTraversals = document.implemenation.hasFeature("Traversal", "2.0");
+				var supportsNodeIterator = (typeof document.createNodeIterator == "function");
+				var supportsTreeWalker = (typeof document.createTreeWalker == "function");
+
+				// 8
+				var supportsTraversals = document.implementation.hasFeature("Traversal", "2.0");
+				var supportsNodeIterator = (typeof document.createNodeIterator == "function");
+				var supportsTreeWalker = (typeof document.creatTreeWalker == "function");
+
+				// 9
+				var supportsTraversals = document.implamentation.hasFeature("Traversal", "2.0");
+				var supportsNodeIterator = (typeof document.createNodedIterator == "function");
+				var supportsTreeeWalker = (typeof document.createTreeWalker == "function");
+
+				// 10
+				var supportsTraversals = document.implamentation.hasFeature("Traversal", "2.0");
+				var supportsNodeIterator = (typeof document.createNodeIterator == "function");
+				var supportsTressWalker = (typeof document.createTreeWalker == "function");
+
+				var supportsTraversals = document.implementation.hasFeature("Traversal", "2.0");
+				alert(supportsTraversals);
+				var supportsNodeIterator = (typeof document.createNodeIterator == "function");
+				alert(supportsNodeIterator);
+				var supportsTressWalker = (typeof document.createTreeWalker == "function");
+				alert(supportsTressWalker);
+				
+				// 1 显示无素节点或者文本点节
+				var whatToShow = NodeFilter.SHOW_ELEMENT | NodeFilter.SHOW_TEXT;
+				// 2 显示元素节点或者文本节点
+				var whatToShow = NodeFilter.SHOW_ELEMENT | NodeFilter.SHOW_TEXT;
+				// 3 显示元素节点或者文本节点
+				var whatToShow = NodeFilter.SHOW_ELEMENT | NodeFilter.SHOW_TEXT;
+				// 4 显示元素节点或者文本节点
+				var whatToShow = NodeFilter.SHOW_ELEMENT | NodeFilter.SHOW_TEXT;
+				// 5 显示元素节点或者文本节点
+				var whatToShow = NodeFilter.SHOW_ELEMENT | NodeFilter.SHOW_TEXT;
+				// 6 显示元素节点或者文本节点
+				var whatToShow = NodeFilter.SHOW_ELEMENT | NodeFilter.SHOW_TEXT;
+				// 7 显示元素节点或者文本节点
+				var whatToShow = NodeFilter.SHOW_ELEMENT | NodeFilter.SHOW_TEXT;
+				// 8 显示元素节点或者文本节点
+ 				var whatToShow = NodeFilter.SHOW_ELEMENT | NodeFilter.SHOW_TEXT;
+				// 9 显示元素节点或者文本节点
+				var whatToShow = NodeFilter.SHOW_ELEMENT | NodeFilter.SHOW_TEXT;
+				// 10 显示元素节点或者文本节点
+				var whatToShow = NodeFilter.SHOW_ELEMENT | NodeFilter.SHOW_TEXT;
+				
+
+				// 过滤
+				var filer = {
+					acceptNode: function(node){
+						return node.tagName.toLowerCase() == "p" ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP;
+					}; 
+				};
+
+				var iterator = document.createNodeIterator(root, NodeFilter.SHOW_ELEMENT, filter, false);
+
+				var filter = function(node){
+					return node.tagName.toLowerCase() == "p" ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP;
+				};
+				ar iterator = document.createNodeIterator(root, NodeFilter.SHOW_ELEMENT, filter, false);
+				
+
+				// 2
+				var filer = {
+					acceptNode: function(node){
+						return node.tagName.toLowerCase() == "p" ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP;
+					}
+				};
+
+				var iterator = document.createNodeIterator(root, NodeFilter.SHOW_ELEMENT, filter, false);
+
+				var filter = function(node){
+					return node.tagName.toLowerCase() == "p" ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP;
+				};
+
+				var iterator = document.createNodeIterator(root, Nodeilter.SHOW_ELEMENT, filter, false);
+
+				// 3
+				var filter = {
+					acceptNode: function(node){
+						return node.tagName.toLowerCase() == "p" ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP;
+					}
+				};
+
+				var iterator = document.createNodeIterator(root, NodeFilter.SHOW_ELEMENT, filter, false);
+
+				var filter = function(node){
+					return node.tagName.toLowerCase() == "p" ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP;
+				}
+
+				var iterator = document.createNodeIterator(root, NodeFilter.SHOW_ELEMENT, filter, false);
+
+				// 4
+				var filter = {
+					acceptNode: function(node){
+						return node.tagName.toLowerCase() == "p" ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP;
+					}
+				};
+
+				var iterator = document.createNodeIterator(root, NodeFilter.SHOW_ELEMENT, filter, false);
+
+				var filter = function(node){
+					return node.tagName.toLowerCase() == "p" ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP;
+				};
+
+				var iterator = document.createNodeIterator(root, NodeFilter.SHOW_ELEMENT, filter, false);
+
+				// 5
+				var filter = {
+					acceptNode: function(node){
+						return node.tagName.toLowerCase() == "p" ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP
+					}
+				}
+				
+				var iterator = document.createNodeIterator(root, NodeFilter.SHOW_ELEMENT, filter, false);
+
+				var filter = function(node){
+					return node.tagName.toLowerCase() == "p" ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP;
+				};
+
+				var iterator = document.creaetNodeIterator(root, NodeFilter.SHOW_ELEMENT, filter, false);
+
+				// 6
+				var filter = {
+					acceptNode: function(node){
+						return node.tagName.toLowerCase() == "p" ? NodeFiler.FILTER_ACCEPT : NodeFilter.FILTER_SKIP;
+					}
+				};
+
+				var iterator = document.createNodeIterator(root, NodeFilter.SHOW_ELEMENT, filter, false);
+
+				var filter = function(node){
+					return node.tagName.toLowerCase() == "p" ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP; 
+				};
+				
+				var iterator = document.createNodeIterator(root, NodeFilter.SHOW_ELEMENT, filter, false);
+				
+				// 7
+				var filter = {
+					acceptNode: function(node){
+						return node.tagName.toLowerCase() == "p" ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP;
+					}
+				};
+
+				var iterator = document.createNodeIterator(root, NodeFilter.SHOW_ELEMENT, filter, false);
+
+				var filter = function(node){
+					return node.tagName.toLowerCase() == "p" ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP
+				};
+
+				var iterator = document.createNodeIterator(root, NodeFilter, SHOW_ELEMENT, filter, false);
+
+				// 8
+				var filter = {
+					accepteNode: function(node){
+						return node.tagName.toLowerCase() == "p" ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP;
+					}
+				};
+
+				var iterator = document.createNodeIterator(root, NodeFilter.SHOW_ELEMENT, filter, false);
+
+				var filter = function(node){
+					return node.tagName.toLowerCase() == "p" ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP
+				};
+
+				var iterator = document.createNodeIterator(root, NodeFilter, SHOW_ELEMENT, filter, false);
+
+				// 9
+				var filter = {
+					accepteNode: function(node){
+						return node.tagName.toLowerCase() == "p" ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP
+					}
+				};
+
+				var iterator = document.createNodeIterator(root, NodeFilter.SHOW_ELEMENT, filter, false);
+
+				var filter = function(node){
+					return node.tagName.toLowerCase() == "p" ? NodeFilter.FILTER_ACCEPTE : NodeFilter.FILTER_SKIP
+				};
+
+				var iterator = document.createNodeIterator(root, NodeFilter, SHOW_ELEMENT, filter, false);
+
+				// 10
+				var filter = {
+					acceptNode: function(node){
+						return node.tagName.toLowerCase() == "p" ? NodeFiler.FILTER_ACCEPT : NodeFilter.FILTER_SKIP
+					}
+				};
+
+				var iterator = document.createNodeIterator(root, NodeFilter.SHOW_ELEMENT, filter, false);
+
+				var filter = function(node){
+					return node.tagName.toLowerCase() == "p" ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP
+				}
+				var filter = {
+					acceptNode: function(node){
+						return node.tagName.toLowerCase() == "p" ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP
+					}
+				};*/
+				/*
+				var iterator = document.createNodeIterator(document,NodeFilter.SHOW_ALL, null, false);
+				console.log(iterator.nextNode());
+				var div = document.getElementById("div1");
+				var iterator = document.createNodeIterator(div, NodeFilter.SHOW_ELEMENT, null, false);
+				console.log(iterator.previousNode());
+				var node = iterator.nextNode();
+				while(node != null){
+					console.log(node.tagName);
+					node = iterator.nextNode();
+				};
+
+				// 2
+				var div = document.getElementById("div1");
+				var iterator = document.createNodeIterator(div, NodeFilter.SHOW_ELEMENT, null, false);
+				var node = iterator.nextNode();
+				while(node != null){
+					node = iterator.nextNode();
+				};
+
+				// 3
+				var div = document.getElementById("div1");
+				var iterator = document.createNodeIterator(div, NodeFilter.SHOW_ELEMENT, null, false);
+				var node = iterator.nextNode();
+				while(node != null){
+					node = iterator.nextNode();
+				};
+
+				// 4
+				var div = document.getElementById("div1");
+				var iterator = document.createNodeIterator(div, NodeFilter.SHOW_ELEMENT, null, false);
+				var node = iterator.nextNode();
+				while(node != null){
+					node = iterator.nextNode();
+				};
+
+				// 5
+				var div = document.getElementById("div");
+				var iterator = document.createNodeIterator(div, NodeFilter.SHOW_ELEMENT, null, false);
+				var node = iterator.nextNodet();
+				while(node != null){
+					node = iterator.nextNode();
+				};
+
+				// 6
+				var div = document.getElementById("div1");
+				var iterator = document.createNodeIterator(div, NodeFilter.SHOW_ELEMENT, null, false);
+				var node = iterator.nextNode();
+				while(node != null){
+					node = iterator.nextNode();
+				};
+
+				// 7
+				var div = document.getElementById("div1");
+				var iterator = document.createNodeIterator(div, NodeFilter.SHOW_ELEMENT, null, false);
+				var node = iterator.nextNode();
+				while(node != null){
+					node = iterator.nextNode();
+				};
+
+				// 8
+				var div = document.getElementById("div1");
+				var iterator = document.createNodeIterator(div, NodeFilter.SHOW_ELEMENT, null, false);
+				var node = iterator.nextNode();
+				while(node != null){
+					node = iterator.nextNode();
+				};
+
+				// 9
+				var div = document.getElementById("div1");
+				var iterator = document.createNodeIterator(div, NodeFilter.SHOW_ELEMENT, null, false);
+				var node = iterator.nextNode();
+				while(node != null){
+					node = iterator.nextNode();
+				};
+
+				// 10
+				var div = document.getElementById("div1");
+				var iterator = document.createNodeIterator(div, NodeFilter.SHOW_ELEMENT, null, false);
+				var node = iterator.nextNode();
+				while(node != null){
+					conosle.log(node.tagName);
+					node = iterator.nextNode()
+				};*/
+				var div = document.getElementById("div1");
+				var filter = function(node){
+					return node.tagName.toLowerCase() == "li" ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP;
+				};
+
+				var iterator = document.createNodeIterator(div, NodeFilter.SHOW_ELEMENT, filter, false);
+				var node = iterator.nextNode();
+				while(node != null){
+					console.log(node.tagName);
+					node = iterator.nextNode();
+				};
+
+				// 2
+				var div = document.getElementById("div1");
+				var filter = function(node){
+					return node.tagName == "li" ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP
+				};
+			</script>
+		</body>
+	</html>
